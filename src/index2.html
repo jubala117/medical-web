@@ -1,1 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical&Care - Hacemos fácil cuidarte</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles & Configuration -->
+    <style>
+        /* Applying Montserrat as the default font */
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Custom styles for the slideshow */
+        .slideshow-container {
+            /* This makes the track a single long row */
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .slide {
+            /* Each slide takes up the full width of its container */
+            flex: 0 0 100%;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- =========== Header / Navbar =========== -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">
+                Medical&Care
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#" class="text-gray-600 hover:text-blue-600">Servicios</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600">Blog</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600">Sobre Nosotros</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600">Contacto</a>
+            </div>
+            <a href="#" class="bg-green-500 text-white font-semibold px-6 py-2 rounded-full hover:bg-green-600 transition-colors">
+                Mi Cuenta
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- =========== Hero Slideshow Section =========== -->
+        <section class="relative w-full overflow-hidden py-12 bg-gray-100">
+            <!-- This is the main container that creates the "window" for the slides -->
+            <div id="slideshow-window" class="w-full max-w-6xl mx-auto">
+                <div id="slideshow-container" class="slideshow-container">
+                    
+                    <!-- Slide 1 -->
+                    <div class="slide px-4">
+                        <div class="h-[500px] bg-blue-500 rounded-3xl flex items-center justify-center text-white p-8 bg-cover bg-center" style="background-image: url('https://placehold.co/1200x500/0099FF/FFFFFF?text=Imagen+Tratamientos');">
+                            <div class="text-center max-w-lg">
+                                <h2 class="text-xl font-semibold">Hacemos fácil cuidarte</h2>
+                                <h1 class="text-5xl font-extrabold my-4">Revisa tus tratamientos</h1>
+                                <a href="#" class="mt-4 inline-block bg-white text-blue-600 font-bold px-8 py-3 rounded-full hover:bg-gray-200 transition-colors">
+                                    Iniciar Sesión
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="slide px-4">
+                        <div class="h-[500px] bg-green-500 rounded-3xl flex items-center justify-center text-white p-8 bg-cover bg-center" style="background-image: url('https://placehold.co/1200x500/8BC540/FFFFFF?text=Imagen+Resultados');">
+                            <div class="text-center max-w-lg">
+                                <h2 class="text-xl font-semibold">Hacemos fácil cuidarte</h2>
+                                <h1 class="text-5xl font-extrabold my-4">Revisa tus resultados</h1>
+                                <a href="#" class="mt-4 inline-block bg-white text-green-600 font-bold px-8 py-3 rounded-full hover:bg-gray-200 transition-colors">
+                                    Iniciar Sesión
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="slide px-4">
+                        <div class="h-[500px] bg-gray-700 rounded-3xl flex items-center justify-center text-white p-8 bg-cover bg-center" style="background-image: url('https://placehold.co/1200x500/4A4A4A/FFFFFF?text=Imagen+Promociones');">
+                            <div class="text-center max-w-lg">
+                                <h2 class="text-xl font-semibold">DILE A ESA PERSONA ESPECIAL</h2>
+                                <h1 class="text-5xl font-extrabold my-4">QUE SE CUIDE POR TI</h1>
+                                <a href="#" class="mt-4 inline-block bg-transparent border-2 border-white text-white font-bold px-8 py-3 rounded-full hover:bg-white hover:text-gray-800 transition-colors">
+                                    Conocer promociones
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Slideshow Controls -->
+            <button id="prevBtn" class="absolute top-1/2 left-4 md:left-12 transform -translate-y-1/2 bg-white/50 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+            </button>
+            <button id="nextBtn" class="absolute top-1/2 right-4 md:right-12 transform -translate-y-1/2 bg-white/50 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </button>
+        </section>
+
+
+        <!-- =========== Services Section =========== -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-12">Nuestros servicios principales</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <!-- Service Card 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <!-- Icon Placeholder -->
+                            <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Medicina General</h3>
+                        <p class="text-gray-600">Atención integral para toda la familia.</p>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                             <!-- Icon Placeholder -->
+                            <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Odontología</h3>
+                        <p class="text-gray-600">Cuida tu salud bucal con nuestros especialistas.</p>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="bg-purple-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                             <!-- Icon Placeholder -->
+                            <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Fisioterapia</h3>
+                        <p class="text-gray-600">Recuperación y bienestar físico.</p>
+                    </div>
+
+                    <!-- Service Card 4 -->
+                    <div class="bg-red-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                         <!-- Icon Placeholder -->
+                        <svg class="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Rayos X e Imágenes</h3>
+                    <p class="text-gray-600">Diagnósticos precisos con alta tecnología.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========== Footer =========== -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1">
+                    <h3 class="text-2xl font-bold mb-4">Medical&Care</h3>
+                    <p class="text-gray-400">Hacemos fácil cuidarte.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Servicios</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Medicina General</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Odontología</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Fisioterapia</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Imágenes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Información</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Sobre Nosotros</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Síguenos</h4>
+                    <!-- Social Icons would go here -->
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-900 py-4">
+            <p class="text-center text-gray-500 text-sm">&copy; 2025 Medical&Care. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+
+    <!-- =========== JavaScript for Slideshow =========== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slideshowContainer = document.getElementById('slideshow-container');
+            const slides = slideshowContainer.children;
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const totalSlides = slides.length;
+            let currentIndex = 0;
+
+            // This function moves the slide track
+            function goToSlide(index) {
+                // Ensure the index is within bounds
+                if (index < 0) {
+                    index = totalSlides - 1;
+                } else if (index >= totalSlides) {
+                    index = 0;
+                }
+                currentIndex = index;
+                const offset = -currentIndex * 100; // Move by 100% of the container width
+                slideshowContainer.style.transform = `translateX(${offset}%)`;
+            }
+
+            // Event Listeners for buttons
+            nextBtn.addEventListener('click', () => {
+                goToSlide(currentIndex + 1);
+            });
+
+            prevBtn.addEventListener('click', () => {
+                goToSlide(currentIndex - 1);
+            });
+
+            // Optional: Autoplay functionality
+            // Uncomment the lines below to enable autoplay
+            // let autoPlayInterval = setInterval(() => {
+            //     nextBtn.click();
+            // }, 5000); // Change slide every 5 seconds
+
+            // // Optional: Pause autoplay on hover
+            // slideshowContainer.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
+            // slideshowContainer.addEventListener('mouseleave', () => {
+            //     autoPlayInterval = setInterval(() => {
+            //         nextBtn.click();
+            //     }, 5000);
+            // });
+
+            // Initialize the slideshow
+            goToSlide(0);
+        });
+    </script>
+
+</body>
+</html>
 

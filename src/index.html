@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medical&Care - Hacemos fácil cuidarte</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Link to your external CSS file -->
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body class="font-sans antialiased text-gray-800">
@@ -48,7 +50,7 @@
                         <a href="#" class="btn-primary px-8 py-3 rounded-lg text-white font-medium inline-block">Agendar cita</a>
                     </div>
                     <div class="md:w-1/2 flex justify-center">
-                        <img src="../public/images/bg-slide1.jpg" alt="Médico atendiendo paciente" class="max-w-full h-auto">
+                        <img src="../public/images/bg-slide1.jpg" alt="Médico sonriendo con una paciente" class="max-w-full h-auto">
                     </div>
                 </div>
             </div>
@@ -62,7 +64,7 @@
                         <a href="#" class="btn-primary px-8 py-3 rounded-lg text-white font-medium inline-block">Ver resultados</a>
                     </div>
                     <div class="md:w-1/2 flex justify-center">
-                        <img src="../public/images/bg-slide1.jpg" alt="Resultados online" class="max-w-full h-auto">
+                        <img src="../public/images/bg-slide2.jpg" alt="Persona revisando resultados médicos en un celular" class="max-w-full h-auto">
                     </div>
                 </div>
             </div>
@@ -76,7 +78,7 @@
                         <a href="#" class="btn-primary px-8 py-3 rounded-lg text-white font-medium inline-block">Ver paquetes</a>
                     </div>
                     <div class="md:w-1/2 flex justify-center">
-                        <img src="../public/images/bg-slide1.jpg" alt="Paquetes médicos" class="max-w-full h-auto">
+                        <img src="../public/images/bg-slide3.jpg" alt="Familia feliz y saludable" class="max-w-full h-auto">
                     </div>
                 </div>
             </div>
@@ -84,21 +86,21 @@
         
         <!-- Slider Controls -->
         <div class="absolute bottom-8 left-0 right-0 flex justify-center space-x-2 z-10">
-            <button class="slider-dot w-3 h-3 rounded-full bg-white opacity-50 focus:outline-none"></button>
-            <button class="slider-dot w-3 h-3 rounded-full bg-white opacity-50 focus:outline-none"></button>
-            <button class="slider-dot w-3 h-3 rounded-full bg-white opacity-50 focus:outline-none"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-white opacity-50 focus:outline-none" aria-label="Ir al slide 1"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-white opacity-50 focus:outline-none" aria-label="Ir al slide 2"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-white opacity-50 focus:outline-none" aria-label="Ir al slide 3"></button>
         </div>
         
         <!-- Prev/Next Buttons -->
-        <button class="slider-prev absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl focus:outline-none z-10">
+        <button class="slider-prev absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl focus:outline-none z-10" aria-label="Slide anterior">
             <i class="fas fa-chevron-left"></i>
         </button>
-        <button class="slider-next absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl focus:outline-none z-10">
+        <button class="slider-next absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl focus:outline-none z-10" aria-label="Siguiente slide">
             <i class="fas fa-chevron-right"></i>
         </button>
     </section>
 
-        <!-- Quick Links -->
+    <!-- Quick Links -->
     <section class="py-12 bg-white">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -148,58 +150,18 @@
             <h2 class="text-3xl font-bold text-center mb-4">Paquetes Preventivos</h2>
             <p class="text-xl text-center text-gray-600 mb-12">Los mejores precios para cuidar tu salud</p>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Package 1 -->
-                <div class="card-hover bg-white rounded-xl shadow-md overflow-hidden transition-transform">
-                    <div class="relative">
-                        <img src="https://placehold.co/400x250/E2E8F0/4A5568?text=Chequeo+Mujer" alt="Chequeo Control Mujer" class="w-full h-48 object-cover">
-                        <span class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">-30%</span>
-                    </div>
-                    <div class="p-4">
-                        <a href="#" class="text-blue-800 font-medium hover:underline">Chequeo control mujer</a>
-                        <div class="mt-2">
-                            <span class="text-sm text-gray-500 line-through">Antes $73.60</span>
-                            <p class="text-xl font-bold text-blue-800">$51.52</p>
-                        </div>
-                        <a href="#" class="mt-4 inline-block text-blue-800 hover:underline">Ver más</a>
+            <div class="packages-slider-container relative">
+                <div class="packages-viewport overflow-hidden">
+                    <div id="packages-track" class="packages-track flex transition-transform duration-500 ease-in-out">
+                        <!-- Package cards will be inserted by JS -->
                     </div>
                 </div>
-                
-                <!-- Package 2 -->
-                <div class="card-hover bg-white rounded-xl shadow-md overflow-hidden transition-transform">
-                    <div class="relative">
-                        <img src="https://placehold.co/400x250/E2E8F0/4A5568?text=Vitamina+C" alt="Vitamina C + Consulta" class="w-full h-48 object-cover">
-                    </div>
-                    <div class="p-4">
-                        <a href="#" class="text-blue-800 font-medium hover:underline">Vitamina C + Consulta</a>
-                        <p class="text-xl font-bold text-blue-800 mt-2">$64.11</p>
-                        <a href="#" class="mt-4 inline-block text-blue-800 hover:underline">Ver más</a>
-                    </div>
-                </div>
-                
-                <!-- Package 3 -->
-                <div class="card-hover bg-white rounded-xl shadow-md overflow-hidden transition-transform">
-                    <div class="relative">
-                        <img src="https://placehold.co/400x250/E2E8F0/4A5568?text=Cuidado+Auditivo" alt="Cuidado Auditivo" class="w-full h-48 object-cover">
-                    </div>
-                    <div class="p-4">
-                        <a href="#" class="text-blue-800 font-medium hover:underline">Cuidado auditivo integral</a>
-                        <p class="text-xl font-bold text-blue-800 mt-2">$59.20</p>
-                        <a href="#" class="mt-4 inline-block text-blue-800 hover:underline">Ver más</a>
-                    </div>
-                </div>
-                
-                <!-- Package 4 -->
-                <div class="card-hover bg-white rounded-xl shadow-md overflow-hidden transition-transform">
-                    <div class="relative">
-                        <img src="https://placehold.co/400x250/E2E8F0/4A5568?text=Sistema+Digestivo" alt="Sistema Digestivo" class="w-full h-48 object-cover">
-                    </div>
-                    <div class="p-4">
-                        <a href="#" class="text-blue-800 font-medium hover:underline">Control sistema digestivo</a>
-                        <p class="text-xl font-bold text-blue-800 mt-2">$577.95</p>
-                        <a href="#" class="mt-4 inline-block text-blue-800 hover:underline">Ver más</a>
-                    </div>
-                </div>
+                <button id="packages-prev" class="absolute top-1/2 -left-5 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed z-10" aria-label="Paquete anterior">
+                    <i class="fas fa-chevron-left text-gray-600"></i>
+                </button>
+                <button id="packages-next" class="absolute top-1/2 -right-5 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed z-10" aria-label="Siguiente paquete">
+                    <i class="fas fa-chevron-right text-gray-600"></i>
+                </button>
             </div>
             
             <div class="mt-12 text-center">
@@ -208,7 +170,7 @@
         </div>
     </section>
 
-    <!-- App Download -->
+    <!-- App Download Section -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-10 md:mb-0 flex justify-center">
@@ -251,7 +213,6 @@
                     <h3 class="text-xl font-bold mb-4">Medical&Care</h3>
                     <p class="text-gray-400">Hacemos fácil cuidarte</p>
                 </div>
-                
                 <div>
                     <h4 class="text-lg font-bold mb-4">Servicios</h4>
                     <ul class="space-y-2">
@@ -261,7 +222,6 @@
                         <li><a href="#" class="text-gray-400 hover:text-white">Farmacia</a></li>
                     </ul>
                 </div>
-                
                 <div>
                     <h4 class="text-lg font-bold mb-4">Información</h4>
                     <ul class="space-y-2">
@@ -271,7 +231,6 @@
                         <li><a href="#" class="text-gray-400 hover:text-white">Preguntas frecuentes</a></li>
                     </ul>
                 </div>
-                
                 <div>
                     <h4 class="text-lg font-bold mb-4">Contacto</h4>
                     <ul class="space-y-2">
@@ -280,7 +239,6 @@
                     </ul>
                 </div>
             </div>
-            
             <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
                 <p class="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2025 Medical&Care. Todos los derechos reservados.</p>
                 <div class="flex space-x-6">
@@ -290,7 +248,11 @@
             </div>
         </div>
     </footer>
-<script src="scripts/main.js"></script>
+
+    <!-- ================================================== -->
+    <!-- === LA LÍNEA MÁS IMPORTANTE: CONECTA EL MOTOR === -->
+    <!-- ================================================== -->
+    <script src="scripts/main.js"></script>
+
 </body>
 </html>
-
