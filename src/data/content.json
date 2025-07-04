@@ -1,0 +1,36 @@
+{
+  "heroSlides": [
+    {
+      "bgImage": "../public/images/bg-slide1.jpg",
+      "foregroundImage": "../public/images/doctor.png",
+      "altText": "Médico sonriendo con una paciente",
+      "subtitle": "Hacemos fácil cuidarte",
+      "title": "Salud familiar al alcance de todos",
+      "buttonText": "Agendar cita"
+    },
+    {
+      "bgImage": "../public/images/bg-slide2.jpg",
+      "foregroundImage": null,
+      "altText": "Persona revisando resultados médicos en un celular",
+      "subtitle": "Resultados en línea",
+      "title": "Consulta tus exámenes cuando y donde quieras",
+      "buttonText": "Ver resultados"
+    },
+    {
+      "bgImage": "../public/images/bg-slide3.jpg",
+      "foregroundImage": null,
+      "altText": "Familia feliz y saludable",
+      "subtitle": "Paquetes Preventivos",
+      "title": "Cuidamos de ti con precios accesibles",
+      "buttonText": "Ver paquetes"
+    }
+  ],
+  "packages": [
+    { "title": "Chequeo control mujer", "oldPrice": "73.60", "newPrice": "51.52", "discount": "-30%", "img": "../public/images/package-1.jpg" },
+    { "title": "Vitamina C + Consulta", "oldPrice": null, "newPrice": "64.11", "discount": null, "img": "../public/images/package-2.jpg" },
+    { "title": "Cuidado auditivo integral", "oldPrice": null, "newPrice": "59.20", "discount": null, "img": "../public/images/package-3.jpg" },
+    { "title": "Control sistema digestivo", "oldPrice": null, "newPrice": "577.95", "discount": null, "img": "../public/images/package-4.jpg" },
+    { "title": "Plan Médico Dermatológico", "oldPrice": "71.00", "newPrice": "35.50", "discount": "-50%", "img": "../public/images/package-5.jpg" },
+    { "title": "Corazón Sano 360", "oldPrice": "76.50", "newPrice": "45.90", "discount": "-40%", "img": "../public/images/package-6.jpg" }
+  ]
+}
