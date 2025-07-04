@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medical&Care - Hacemos fácil cuidarte</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
@@ -12,6 +14,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Link to your external CSS file -->
     <link rel="stylesheet" href="styles/main.css">
+
+    <!-- =========== CRITICAL SLIDER STYLES (FIX) =========== -->
+    <style>
+        /* Hero Slider Fix */
+        .hero-slider .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 1;
+            transition: opacity 0.7s ease-in-out;
+        }
+        .hero-slider .slide.active {
+            opacity: 1;
+            z-index: 2;
+        }
+
+        /* Packages Slider Responsive Fix */
+        .package-slide {
+            flex: 0 0 100%; /* Mobile: 1 slide */
+            max-width: 100%;
+        }
+        @media (min-width: 640px) { /* sm breakpoint */
+            .package-slide {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .package-slide {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+        }
+    </style>
 </head>
 <body class="font-sans antialiased text-gray-800">
     <!-- Header -->
@@ -40,62 +79,20 @@
 
     <!-- Hero Slider -->
     <section class="relative overflow-hidden hero-gradient text-white h-[550px]">
-        <div class="hero-slider h-full">
-            <!-- Slide 1 -->
-            <div class="slide active flex items-center py-16 md:py-24">
-                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-                    <div class="md:w-1/2 mb-10 md:mb-0">
-                        <h1 class="text-4xl md:text-5xl font-bold mb-6">Hacemos fácil cuidarte</h1>
-                        <p class="text-xl md:text-2xl mb-8">Salud familiar al alcance de todos</p>
-                        <a href="#" class="btn-primary px-8 py-3 rounded-lg text-white font-medium inline-block">Agendar cita</a>
-                    </div>
-                    <div class="md:w-1/2 flex justify-center">
-                        <img src="../public/images/bg-slide1.jpg" alt="Médico sonriendo con una paciente" class="max-w-full h-auto">
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide 2 -->
-            <div class="slide flex items-center py-16 md:py-24">
-                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-                    <div class="md:w-1/2 mb-10 md:mb-0">
-                        <h1 class="text-4xl md:text-5xl font-bold mb-6">Resultados en línea</h1>
-                        <p class="text-xl md:text-2xl mb-8">Consulta tus exámenes cuando y donde quieras</p>
-                        <a href="#" class="btn-primary px-8 py-3 rounded-lg text-white font-medium inline-block">Ver resultados</a>
-                    </div>
-                    <div class="md:w-1/2 flex justify-center">
-                        <img src="../public/images/bg-slide2.jpg" alt="Persona revisando resultados médicos en un celular" class="max-w-full h-auto">
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide 3 --> 
-            <div class="slide flex items-center py-16 md:py-24">
-                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-                    <div class="md:w-1/2 mb-10 md:mb-0">
-                        <h1 class="text-4xl md:text-5xl font-bold mb-6">Paquetes Preventivos</h1>
-                        <p class="text-xl md:text-2xl mb-8">Cuidamos de ti con precios accesibles</p>
-                        <a href="#" class="btn-primary px-8 py-3 rounded-lg text-white font-medium inline-block">Ver paquetes</a>
-                    </div>
-                    <div class="md:w-1/2 flex justify-center">
-                        <img src="../public/images/bg-slide3.jpg" alt="Familia feliz y saludable" class="max-w-full h-auto">
-                    </div>
-                </div>
-            </div>
+        <div id="hero-slider-container" class="hero-slider h-full">
+            <!-- Slides will be injected here by JavaScript -->
         </div>
         
         <!-- Slider Controls -->
-        <div class="absolute bottom-8 left-0 right-0 flex justify-center space-x-2 z-10">
-            <button class="slider-dot w-3 h-3 rounded-full bg-white opacity-50 focus:outline-none" aria-label="Ir al slide 1"></button>
-            <button class="slider-dot w-3 h-3 rounded-full bg-white opacity-50 focus:outline-none" aria-label="Ir al slide 2"></button>
-            <button class="slider-dot w-3 h-3 rounded-full bg-white opacity-50 focus:outline-none" aria-label="Ir al slide 3"></button>
+        <div id="hero-dots-container" class="absolute bottom-8 left-0 right-0 flex justify-center space-x-2 z-30">
+            <!-- Dots will be injected here by JavaScript -->
         </div>
         
         <!-- Prev/Next Buttons -->
-        <button class="slider-prev absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl focus:outline-none z-10" aria-label="Slide anterior">
+        <button id="hero-prev-btn" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl focus:outline-none z-30" aria-label="Slide anterior">
             <i class="fas fa-chevron-left"></i>
         </button>
-        <button class="slider-next absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl focus:outline-none z-10" aria-label="Siguiente slide">
+        <button id="hero-next-btn" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl focus:outline-none z-30" aria-label="Siguiente slide">
             <i class="fas fa-chevron-right"></i>
         </button>
     </section>
@@ -249,9 +246,6 @@
         </div>
     </footer>
 
-    <!-- ================================================== -->
-    <!-- === LA LÍNEA MÁS IMPORTANTE: CONECTA EL MOTOR === -->
-    <!-- ================================================== -->
     <script src="scripts/main.js"></script>
 
 </body>
