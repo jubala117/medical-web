@@ -37,6 +37,10 @@ body {
 .stat-item:hover {
     transform: scale(1.05);
 }
+
+.stat-number {
+    word-break: break-all;
+}
 .social-icon {
     transition: all 0.3s ease;
 }

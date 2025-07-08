@@ -9,7 +9,7 @@
       "buttonText": "Conoce los Beneficios"
     },
     {
-      "bgImage": "../public/images/bg-slide1.jpg",
+      "bgImage": "../public/images/bg-slide2.jpg",
       "foregroundImage": "../public/images/phoneCitas.png",
       "altText": "Teléfono con la App de Medical&Care",
       "subtitle": "Hacemos fácil cuidarte",
@@ -25,7 +25,7 @@
       "buttonText": "Ver Paquetes"
     },
     {
-      "bgImage": "../public/images/bg-slide1.jpg",
+      "bgImage": "../public/images/bg-slide2.jpg",
       "foregroundImage": "../public/images/equipoMedicos.png",
       "altText": "Grupo de 5 médicos profesionales de la salud",
       "subtitle": "¡Tenemos todo lo que necesitas!",

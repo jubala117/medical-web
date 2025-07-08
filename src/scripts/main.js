@@ -81,17 +81,31 @@ document.addEventListener('DOMContentLoaded', function() {
             clearInterval(slideInterval);
         }
 
+        function resetTimer() {
+            stopSlideShow();
+            startSlideShow();
+        }
+
         showSlide(0);
         startSlideShow();
 
         heroSliderContainer.addEventListener('mouseenter', stopSlideShow);
         heroSliderContainer.addEventListener('mouseleave', startSlideShow);
         
-        nextBtn.addEventListener('click', () => { nextSlide(); stopSlideShow(); startSlideShow(); });
-        prevBtn.addEventListener('click', () => { prevSlide(); stopSlideShow(); startSlideShow(); });
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetTimer();
+        });
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetTimer();
+        });
         
         dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => { showSlide(index); stopSlideShow(); startSlideShow(); });
+            dot.addEventListener('click', () => {
+                showSlide(index);
+                resetTimer();
+            });
         });
     }
 
