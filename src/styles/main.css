@@ -9,7 +9,7 @@ body {
 
 @media (max-width: 1024px) { /* Tablets */
     .hero-gradient {
-        height: 550px;
+        height: 350px;
     }
 }
 
@@ -62,29 +62,38 @@ body {
     z-index: 2;
 }
 
-/* Fluid Typography for Hero Section */
+/* Responsive Typography for Hero Section */
 .hero-title {
-    /* Font size will scale from 2.25rem (36px) to 3.75rem (60px) */
-    /* Based on viewport width between 320px and 1200px */
-    font-size: clamp(2.25rem, 1.5rem + 3.75vw, 3.75rem);
+    font-size: 3.75rem; /* 60px for Desktop */
     line-height: 1.2;
 }
 
 .hero-subtitle {
-    /* Font size will scale from 1.125rem (18px) to 1.5rem (24px) */
-    font-size: clamp(1.125rem, 0.875rem + 1.25vw, 1.5rem);
+    font-size: 1.5rem; /* 24px for Desktop */
+}
+
+@media (max-width: 1024px) { /* Tablets */
+    .hero-title {
+        font-size: 2.5rem; /* 40px */
+    }
+    .hero-subtitle {
+        font-size: 1.25rem; /* 20px */
+    }
+    .hero-foreground-img {
+        margin-top: -5rem; /* Pull image up on tablets */
+    }
+}
+
+@media (max-width: 767px) { /* Mobile */
+    .hero-title {
+        font-size: 2.25rem; /* 36px */
+    }
+    .hero-subtitle {
+        font-size: 1.125rem; /* 18px */
+    }
 }
 
 .hero-foreground-img {
     max-height: 100%;
     max-width: 100%;
-}
-
-@media (max-width: 767px) {
-    .hero-foreground-img {
-        height: 250px; /* Enforce consistent height */
-        width: 100%;   /* Allow width to fill container */
-        object-fit: contain; /* Ensure image scales correctly */
-        object-position: bottom; /* Align image to the bottom */
-    }
 }
