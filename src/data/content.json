@@ -2,27 +2,35 @@
   "heroSlides": [
     {
       "bgImage": "../public/images/bg-slide1.jpg",
-      "foregroundImage": "../public/images/doctor.png",
-      "altText": "Médico sonriendo con una paciente",
+      "foregroundImage": "../public/images/fam6.png",
+      "altText": "Familia abrazada sonriendo",
+      "subtitle": "Únete a nuestro plan de salud",
+      "title": "Club Medical: Ahorra todo el año en el cuidado de tu familia",
+      "buttonText": "Conoce los Beneficios"
+    },
+    {
+      "bgImage": "../public/images/bg-slide1.jpg",
+      "foregroundImage": "../public/images/phoneCitas.png",
+      "altText": "Teléfono con la App de Medical&Care",
       "subtitle": "Hacemos fácil cuidarte",
-      "title": "Salud familiar al alcance de todos",
-      "buttonText": "Agendar cita"
+      "title": "Tu salud en un solo lugar: Agenda citas y revisa tus tratamientos online",
+      "buttonText": "Ingresa al Portal"
     },
     {
-      "bgImage": "../public/images/bg-slide2.jpg",
-      "foregroundImage": null,
-      "altText": "Persona revisando resultados médicos en un celular",
-      "subtitle": "Resultados en línea",
-      "title": "Consulta tus exámenes cuando y donde quieras",
-      "buttonText": "Ver resultados"
-    },
-    {
-      "bgImage": "../public/images/bg-slide3.jpg",
-      "foregroundImage": null,
-      "altText": "Familia feliz y saludable",
+      "bgImage": "../public/images/bg-slide1.jpg",
+      "foregroundImage": "../public/images/doctoras.png",
+      "altText": "Dos doctoras sosteninedo un paquete",
       "subtitle": "Paquetes Preventivos",
-      "title": "Cuidamos de ti con precios accesibles",
-      "buttonText": "Ver paquetes"
+      "title": "Descubre nuestros paquetes y promociones del mes",
+      "buttonText": "Ver Paquetes"
+    },
+    {
+      "bgImage": "../public/images/bg-slide1.jpg",
+      "foregroundImage": "../public/images/equipoMedicos.png",
+      "altText": "Grupo de 5 médicos profesionales de la salud",
+      "subtitle": "¡Tenemos todo lo que necesitas!",
+      "title": "Especialidades Médicas",
+      "buttonText": "Ver Especialidades"
     }
   ],
   "packages": [

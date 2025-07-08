@@ -22,15 +22,15 @@ document.addEventListener('DOMContentLoaded', function() {
         heroSliderContainer.innerHTML = heroSlidesData.map((slideData, index) => `
             <div class="slide ${index === 0 ? 'active' : ''}" style="background-image: url('${slideData.bgImage}');">
                 <div class="container mx-auto px-4 h-full">
-                    <div class="flex flex-col md:flex-row items-center h-full">
-                        <div class="md:w-1/2 text-center md:text-left z-10">
-                            <p class="text-xl md:text-2xl mb-4">${slideData.subtitle}</p>
-                            <h1 class="text-4xl md:text-5xl font-bold mb-8">${slideData.title}</h1>
+                    <div class="flex flex-col justify-between md:flex-row items-center h-full">
+                        <div class="w-full md:w-3/5 lg:w-1/2 text-center md:text-left z-10 pt-8 md:pt-0">
+                            <p class="hero-subtitle mb-4">${slideData.subtitle}</p>
+                            <h1 class="hero-title font-bold mb-8">${slideData.title}</h1>
                             <a href="#" class="btn-primary px-8 py-3 rounded-lg text-white font-medium inline-block">${slideData.buttonText}</a>
                         </div>
                         ${slideData.foregroundImage ? `
-                        <div class="w-full md:w-1/2 h-1/2 md:h-full flex justify-center items-center md:items-end mt-4 md:mt-0">
-                            <img src="${slideData.foregroundImage}" alt="${slideData.altText}" class="max-h-full max-w-full object-contain">
+                        <div class="w-full md:w-2/5 lg:w-1/2 h-auto md:h-full flex justify-center items-end">
+                            <img src="${slideData.foregroundImage}" alt="${slideData.altText}" class="hero-foreground-img object-contain">
                         </div>
                         ` : ''}
                     </div>
@@ -83,6 +83,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         showSlide(0);
         startSlideShow();
+
+        heroSliderContainer.addEventListener('mouseenter', stopSlideShow);
+        heroSliderContainer.addEventListener('mouseleave', startSlideShow);
         
         nextBtn.addEventListener('click', () => { nextSlide(); stopSlideShow(); startSlideShow(); });
         prevBtn.addEventListener('click', () => { prevSlide(); stopSlideShow(); startSlideShow(); });
