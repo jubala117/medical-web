@@ -189,17 +189,82 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('resize', updatePackagesSlider);
     }
 
-    // --- Especialidades Page Logic ---
-    function initEspecialidadesPage() {
-        // Mobile menu toggle
+    // --- Header Logic ---
+    function initHeader() {
         const menuBtn = document.getElementById('menu-btn');
-        if (menuBtn) {
-            menuBtn.addEventListener('click', function() {
-                const menu = document.getElementById('mobile-menu');
-                menu.classList.toggle('hidden');
-            });
+        const mobileMenuPanel = document.getElementById('mobile-menu');
+        const desktopNav = document.getElementById('desktop-nav');
+        const mainLogoLink = document.querySelector('header a');
+        const loginButtonDesktop = document.getElementById('desktop-login-btn');
+
+        if (!menuBtn || !mobileMenuPanel || !desktopNav || !mainLogoLink || !loginButtonDesktop) {
+            console.error('Header elements not found. Mobile menu cannot be built.');
+            return;
         }
 
+        // --- Panel Open/Close Logic ---
+        const openMenu = () => mobileMenuPanel.classList.add('open');
+        const closeMenu = () => mobileMenuPanel.classList.remove('open');
+
+        menuBtn.addEventListener('click', openMenu);
+
+        // --- Dynamic Menu Building ---
+        mobileMenuPanel.innerHTML = ''; // Clear previous content
+
+        // 1. Create Header
+        const menuHeader = document.createElement('div');
+        menuHeader.className = 'mobile-menu-header';
+        const logoClone = mainLogoLink.cloneNode(true);
+        logoClone.querySelector('img').className = 'h-10';
+        const closeBtn = document.createElement('button');
+        closeBtn.innerHTML = '<i class="fas fa-times text-2xl text-gray-600"></i>';
+        closeBtn.onclick = closeMenu;
+        menuHeader.append(logoClone, closeBtn);
+
+        // 2. Create Body
+        const menuBody = document.createElement('div');
+        menuBody.className = 'mobile-menu-body';
+        
+        // Process desktop nav links
+        Array.from(desktopNav.children).forEach(navElement => {
+            // Handle dropdowns (which are DIVs)
+            if (navElement.classList.contains('dropdown')) {
+                const link = navElement.querySelector('a');
+                const subMenu = navElement.querySelector('.dropdown-menu');
+                if (!link || !subMenu) return;
+
+                const newLink = link.cloneNode(true);
+                newLink.className = 'mobile-menu-link';
+                
+                const newSubMenu = subMenu.cloneNode(true);
+                newSubMenu.className = 'mobile-submenu';
+                
+                newLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    newLink.classList.toggle('open');
+                    newSubMenu.classList.toggle('open');
+                });
+                menuBody.append(newLink, newSubMenu);
+            } 
+            // Handle direct links (which are A tags)
+            else if (navElement.tagName === 'A') {
+                const newLink = navElement.cloneNode(true);
+                newLink.className = 'mobile-menu-link';
+                menuBody.appendChild(newLink);
+            }
+        });
+
+        // 3. Add Login Button
+        const loginButton = loginButtonDesktop.cloneNode(true);
+        loginButton.className = 'w-full text-center bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center mt-6';
+        menuBody.appendChild(loginButton);
+
+        // 4. Assemble Menu
+        mobileMenuPanel.append(menuHeader, menuBody);
+    }
+
+    // --- Especialidades Page Logic ---
+    function initEspecialidadesPage() {
         // FAQ accordion
         const faqQuestions = document.querySelectorAll('.faq-question');
         faqQuestions.forEach(question => {
@@ -264,6 +329,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 initPackagesSlider(content.packages);
             }
         }
+        
+        // Initialize header logic on all pages
+        initHeader();
+
         // Run page-specific logic
         if (document.getElementById('especialidades')) {
             initEspecialidadesPage();

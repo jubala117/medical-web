@@ -1,28 +1,77 @@
 <header class="bg-white shadow-md sticky top-0 z-50">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <!-- Logo -->
         <a href="index.html" class="flex items-center">
             <img src="../public/images/logoM&C2.svg" alt="Medical&Care Logo" class="h-12">
         </a>
         
-        <nav class="hidden md:flex space-x-8">
-            <a href="index.html" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Inicio</a>
-            <a href="especialidades.html" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Especialidades</a>
-            <a href="#doctores" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Doctores</a>
-            <a href="#contacto" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Contacto</a>
+        <!-- Desktop Navigation -->
+        <nav id="desktop-nav" class="hidden md:flex items-center space-x-6">
+            <div class="relative dropdown">
+                <a href="#" class="flex items-center text-blue-800 hover:text-blue-600">
+                    <i class="fas fa-hand-holding-heart mr-2"></i>
+                    Servicios
+                    <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                </a>
+                <div class="dropdown-menu absolute hidden bg-white shadow-lg rounded-md py-2 w-48">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Laboratorio</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Imágenes</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Óptica</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Terapias de Rehabilitación</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 font-bold">Más Servicios</a>
+                </div>
+            </div>
+            <div class="relative dropdown">
+                <a href="especialidades.html" class="flex items-center text-blue-800 hover:text-blue-600">
+                    <i class="fas fa-stethoscope mr-2"></i>
+                    Especialidades
+                    <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                </a>
+                <div class="dropdown-menu absolute hidden bg-white shadow-lg rounded-md py-2 w-48">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Medicina General</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Pediatría</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Ginecología</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Traumatología</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Odontología</a>
+                    <a href="especialidades.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 font-bold">Ver Todas</a>
+                </div>
+            </div>
+            <a href="#" class="flex items-center text-blue-800 hover:text-blue-600">
+                <i class="fas fa-box mr-2"></i>
+                Paquetes Preventivos
+            </a>
+            <a href="#" class="flex items-center text-blue-800 hover:text-blue-600">
+                <i class="fas fa-map-marker-alt mr-2"></i>
+                Ubicaciones
+            </a>
+            <div class="relative dropdown">
+                <a href="#" class="flex items-center text-blue-800 hover:text-blue-600">
+                    <i class="fas fa-users mr-2"></i>
+                    Nosotros
+                    <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                </a>
+                <div class="dropdown-menu absolute hidden bg-white shadow-lg rounded-md py-2 w-48">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Misión y Visión</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Trabaja con Nosotros</a>
+                </div>
+            </div>
         </nav>
         
+        <div class="hidden md:flex items-center">
+            <a id="desktop-login-btn" href="#" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors flex items-center">
+                <i class="fas fa-user mr-2"></i>
+                Iniciar sesión
+            </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
         <button class="md:hidden text-gray-700" id="menu-btn">
             <i class="fas fa-bars text-2xl"></i>
         </button>
     </div>
     
-    <!-- Mobile menu -->
-    <div class="md:hidden hidden bg-white w-full py-4 px-4 shadow-md" id="mobile-menu">
-        <div class="flex flex-col space-y-4">
-            <a href="index.html" class="text-gray-700 hover:text-blue-500 font-medium">Inicio</a>
-            <a href="especialidades.html" class="text-gray-700 hover:text-blue-500 font-medium">Especialidades</a>
-            <a href="#doctores" class="text-gray-700 hover:text-blue-500 font-medium">Doctores</a>
-            <a href="#contacto" class="text-gray-700 hover:text-blue-500 font-medium">Contacto</a>
-        </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-panel" id="mobile-menu">
+        <!-- Mobile menu content will be generated by JS -->
     </div>
 </header>
