@@ -149,44 +149,68 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         `).join('');
 
-        const packageSlides = packagesTrack.querySelectorAll('.package-slide');
-        let packagesCurrentIndex = 0;
+        let packageSlides = Array.from(packagesTrack.children);
+        let isTransitioning = false;
+        let packagesCurrentIndex = 1; // Start at the first real slide
 
-        function getVisibleSlides() {
-            if (packageSlides.length === 0) return 0;
-            const viewportWidth = packagesTrack.parentElement.offsetWidth;
-            const slideWidth = packageSlides[0].offsetWidth;
-            return slideWidth > 0 ? Math.floor(viewportWidth / slideWidth) : 0;
+        const cloneCount = 4; // Number of slides to clone on each side
+
+        // Clone slides for infinite loop
+        const slidesToPrepend = packageSlides.slice(-cloneCount).map(slide => slide.cloneNode(true));
+        const slidesToAppend = packageSlides.slice(0, cloneCount).map(slide => slide.cloneNode(true));
+        
+        packagesTrack.append(...slidesToAppend);
+        packagesTrack.prepend(...slidesToPrepend);
+
+        // Recalculate slides after cloning
+        packageSlides = Array.from(packagesTrack.children);
+
+        function getSlideWidth() {
+            return packageSlides.length > 0 ? packageSlides[0].offsetWidth : 0;
         }
 
-        function updatePackagesSlider() {
+        function updatePackagesSlider(transition = true) {
             if (packageSlides.length === 0) return;
-            const slideWidth = packageSlides[0].offsetWidth;
-            packagesTrack.style.transform = `translateX(-${packagesCurrentIndex * slideWidth}px)`;
+            const slideWidth = getSlideWidth();
             
-            const visibleSlides = getVisibleSlides();
+            packagesTrack.style.transition = transition ? 'transform 0.5s ease-in-out' : 'none';
+            packagesTrack.style.transform = `translateX(-${packagesCurrentIndex * slideWidth}px)`;
+        }
 
-            packagesPrevBtn.disabled = packagesCurrentIndex === 0;
-            packagesNextBtn.disabled = packagesCurrentIndex >= packageSlides.length - visibleSlides;
+        function shiftSlides() {
+            isTransitioning = false;
+            const originalSlidesCount = packagesData.length;
+            
+            if (packagesCurrentIndex <= 0) {
+                packagesCurrentIndex = originalSlidesCount;
+                updatePackagesSlider(false);
+            } else if (packagesCurrentIndex >= originalSlidesCount + 1) {
+                packagesCurrentIndex = 1;
+                updatePackagesSlider(false);
+            }
         }
 
         packagesNextBtn.addEventListener('click', () => {
-            const visibleSlides = getVisibleSlides();
-            if (packagesCurrentIndex < packageSlides.length - visibleSlides) {
-                packagesCurrentIndex++;
-                updatePackagesSlider();
-            }
+            if (isTransitioning) return;
+            isTransitioning = true;
+            packagesCurrentIndex++;
+            updatePackagesSlider();
         });
 
         packagesPrevBtn.addEventListener('click', () => {
-            if (packagesCurrentIndex > 0) {
-                packagesCurrentIndex--;
-                updatePackagesSlider();
-            }
+            if (isTransitioning) return;
+            isTransitioning = true;
+            packagesCurrentIndex--;
+            updatePackagesSlider();
         });
 
-        updatePackagesSlider();
-        window.addEventListener('resize', updatePackagesSlider);
+        packagesTrack.addEventListener('transitionend', shiftSlides);
+
+        // Initial position
+        packagesCurrentIndex = cloneCount;
+        updatePackagesSlider(false);
+
+        window.addEventListener('resize', () => updatePackagesSlider(false));
     }
 
     // --- Header Logic ---
