@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Médico Especializado</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="font-sans bg-gray-50">
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative bg-gradient-to-r from-blue-500 to-blue-700 text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 animate-fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Cuidamos de tu salud</h2>
+                <p class="text-xl mb-6">Profesionales especializados en todas las áreas de la medicina para brindarte la mejor atención.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#cita" class="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold text-center shadow-lg transition duration-300">Solicitar cita</a>
+                    <a href="#especialidades" class="border-2 border-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-lg font-semibold text-center transition duration-300">Nuestras especialidades</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center animate-fade-in" style="animation-delay: 0.2s;">
+                <img src="../public/images/manosMedicos.png" alt="Doctor atendiendo paciente" class="rounded-lg shadow-2xl max-w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialties -->
+    <section id="especialidades" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nuestras Especialidades</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Contamos con un equipo de profesionales altamente capacitados en diversas áreas de la medicina para brindarte la mejor atención.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Medicina General -->
+                <div class="specialty-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="p-6">
+                        <div class="specialty-icon text-blue-500 text-5xl mb-4">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Medicina General</h3>
+                        <p class="text-gray-600">Atención integral para pacientes adultos, diagnóstico y tratamiento de enfermedades comunes.</p>
+                    </div>
+                </div>
+                
+                <!-- Medicina Familiar -->
+                <div class="specialty-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="p-6">
+                        <div class="specialty-icon text-blue-500 text-5xl mb-4">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Medicina Familiar</h3>
+                        <p class="text-gray-600">Atención médica continua y completa para todos los miembros de la familia.</p>
+                    </div>
+                </div>
+                
+                <!-- Ginecología y Obstetricia -->
+                <div class="specialty-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="p-6">
+                        <div class="specialty-icon text-blue-500 text-5xl mb-4">
+                            <i class="fas fa-baby"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Ginecología y Obstetricia</h3>
+                        <p class="text-gray-600">Cuidado de la salud femenina, embarazo, parto y sistema reproductivo.</p>
+                    </div>
+                </div>
+                
+                <!-- Pediatría -->
+                <div class="specialty-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="p-6">
+                        <div class="specialty-icon text-blue-500 text-5xl mb-4">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Pediatría</h3>
+                        <p class="text-gray-600">Atención médica especializada para niños y adolescentes desde el nacimiento.</p>
+                    </div>
+                </div>
+                
+                <!-- Traumatología -->
+                <div class="specialty-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="p-6">
+                        <div class="specialty-icon text-blue-500 text-5xl mb-4">
+                            <i class="fas fa-bone"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Traumatología</h3>
+                        <p class="text-gray-600">Diagnóstico y tratamiento de lesiones y enfermedades del sistema musculoesquelético.</p>
+                    </div>
+                </div>
+                
+                <!-- Reumatología -->
+                <div class="specialty-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="p-6">
+                        <div class="specialty-icon text-blue-500 text-5xl mb-4">
+                            <i class="fas fa-wheelchair"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Reumatología</h3>
+                        <p class="text-gray-600">Tratamiento de enfermedades reumáticas y autoinmunes que afectan articulaciones y tejidos.</p>
+                    </div>
+                </div>
+                
+                <!-- Odontología -->
+                <div class="specialty-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="p-6">
+                        <div class="specialty-icon text-blue-500 text-5xl mb-4">
+                            <i class="fas fa-tooth"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Odontología</h3>
+                        <p class="text-gray-600">Cuidado integral de la salud bucodental, prevención y tratamiento de enfermedades.</p>
+                    </div>
+                </div>
+                
+                <!-- Psicología -->
+                <div class="specialty-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="p-6">
+                        <div class="specialty-icon text-blue-500 text-5xl mb-4">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Psicología</h3>
+                        <p class="text-gray-600">Atención psicológica clínica e infantil para mejorar la salud mental y bienestar emocional.</p>
+                    </div>
+                </div>
+                
+                <!-- Nutrición -->
+                <div class="specialty-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="p-6">
+                        <div class="specialty-icon text-blue-500 text-5xl mb-4">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Nutrición</h3>
+                        <p class="text-gray-600">Planes alimenticios personalizados para mejorar la salud y tratar condiciones específicas.</p>
+                    </div>
+                </div>
+                
+                <!-- Podología -->
+                <div class="specialty-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="p-6">
+                        <div class="specialty-icon text-blue-500 text-5xl mb-4">
+                            <i class="fas fa-shoe-prints"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Podología</h3>
+                        <p class="text-gray-600">Diagnóstico y tratamiento de afecciones y enfermedades de los pies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Appointment -->
+    <section id="cita" class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl overflow-hidden shadow-2xl">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-blue-700 p-8 flex flex-col justify-center">
+                        <h2 class="text-3xl font-bold mb-4">Solicita tu cita médica</h2>
+                        <p class="mb-6">Nuestro equipo está listo para atenderte. Completa el formulario y nos pondremos en contacto contigo para confirmar tu cita.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 text-blue-300 mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm font-medium">Llámanos</p>
+                                    <p class="text-lg">+1 234 567 890</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 text-blue-300 mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm font-medium">Correo electrónico</p>
+                                    <p class="text-lg">contacto@saludplus.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 text-blue-300 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm font-medium">Ubicación</p>
+                                    <p class="text-lg">Av. Principal 123, Ciudad</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8 appointment-form">
+                        <form class="space-y-4">
+                            <div>
+                                <label for="nombre" class="block text-gray-700 font-medium mb-1">Nombre completo</label>
+                                <input type="text" id="nombre" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-1">Correo electrónico</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="telefono" class="block text-gray-700 font-medium mb-1">Teléfono</label>
+                                <input type="tel" id="telefono" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="especialidad" class="block text-gray-700 font-medium mb-1">Especialidad</label>
+                                <select id="especialidad" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    <option value="">Seleccione una especialidad</option>
+                                    <option value="medicina-general">Medicina General</option>
+                                    <option value="medicina-familiar">Medicina Familiar</option>
+                                    <option value="ginecologia">Ginecología y Obstetricia</option>
+                                    <option value="pediatria">Pediatría</option>
+                                    <option value="traumatologia">Traumatología</option>
+                                    <option value="reumatologia">Reumatología</option>
+                                    <option value="odontologia">Odontología</option>
+                                    <option value="psicologia">Psicología</option>
+                                    <option value="nutricion">Nutrición</option>
+                                    <option value="podologia">Podología</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="fecha" class="block text-gray-700 font-medium mb-1">Fecha preferida</label>
+                                <input type="date" id="fecha" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="mensaje" class="block text-gray-700 font-medium mb-1">Mensaje adicional</label>
+                                <textarea id="mensaje" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-semibold transition duration-300">Solicitar cita</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Lo que dicen nuestros pacientes</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Experiencias reales de personas que han confiado en nuestros servicios médicos.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Excelente todo. Me encantó la atención de todo el personal, tanto administrativo como médico y los variados servicios que tienen, el personal es muy preparado, todos son muy amables, organizados y eficientes. Los recomiendo 100%."</p>
+                    <div class="flex items-center">
+                        <div>
+                            <h4 class="font-medium text-gray-800">Blanca M.</h4>
+                            <p class="text-sm text-gray-500">Paciente de Ecografía</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Excelente atención.. muy amables me siento agradecido por el servicio del centro médico gracias.."</p>
+                    <div class="flex items-center">
+                        <div>
+                            <h4 class="font-medium text-gray-800">Fabián A.</h4>
+                            <p class="text-sm text-gray-500">Paciente de Medicina General</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Muy profesionales. Me atendieron bien y a tiempo. Felicidades!"</p>
+                    <div class="flex items-center">
+                        <div>
+                            <h4 class="font-medium text-gray-800">Cristina P.</h4>
+                            <p class="text-sm text-gray-500">Paciente de psicología</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Preguntas frecuentes</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Resuelve tus dudas sobre nuestros servicios y procedimientos.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 font-medium text-gray-800 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition duration-300 flex justify-between items-center">
+                        <span>¿Cómo puedo agendar una cita?</span>
+                        <i class="fas fa-chevron-down text-blue-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden p-4 text-gray-600 border-t border-gray-200">
+                        Puedes agendar una cita llamando a nuestro centro médico al número 1700 GALENO (425366), a través de nuestro chat box de WhatsApp, nuestro formulario de contacto en línea o visitando nuestras instalaciones durante horario de atención.
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 font-medium text-gray-800 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition duration-300 flex justify-between items-center">
+                        <span>¿Qué documentos debo llevar a mi primera consulta?</span>
+                        <i class="fas fa-chevron-down text-blue-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden p-4 text-gray-600 border-t border-gray-200">
+                        Para tu primera consulta te recomendamos llevar: Cédula de Identidad o pasaporte. 
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 font-medium text-gray-800 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition duration-300 flex justify-between items-center">
+                        <span>¿Aceptan seguros médicos?</span>
+                        <i class="fas fa-chevron-down text-blue-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden p-4 text-gray-600 border-t border-gray-200">
+                        Sí, trabajamos con las principales aseguradoras médicas del país. Te recomendamos comunicarte con nuestro departamento administrativo para confirmar si tu póliza tiene cobertura con nosotros.
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 font-medium text-gray-800 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition duration-300 flex justify-between items-center">
+                        <span>¿Cuál es el horario de atención?</span>
+                        <i class="fas fa-chevron-down text-blue-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden p-4 text-gray-600 border-t border-gray-200">
+                        Nuestro horario general es de lunes a viernes de 8:00 am a 8:00 pm y sábados de 9:00 am a 2:00 pm. Algunas especialidades tienen horarios específicos, por lo que te recomendamos confirmar al momento de agendar tu cita.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contacto" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Contáctanos</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Estamos aquí para responder tus preguntas y brindarte la mejor atención médica.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="contact-name" class="block text-gray-700 font-medium mb-1">Nombre</label>
+                                <input type="text" id="contact-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="contact-email" class="block text-gray-700 font-medium mb-1">Correo electrónico</label>
+                                <input type="email" id="contact-email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="contact-subject" class="block text-gray-700 font-medium mb-1">Asunto</label>
+                            <input type="text" id="contact-subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="contact-message" class="block text-gray-700 font-medium mb-1">Mensaje</label>
+                            <textarea id="contact-message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition duration-300">Enviar mensaje</button>
+                    </form>
+                </div>
+                
+                <div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Información de contacto</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 text-blue-500 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium text-gray-800">Dirección</h4>
+                                    <p class="text-gray-600">Av. Principal 123, Col. Centro<br>Ciudad, Estado, C.P. 12345</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 text-blue-500 mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium text-gray-800">Teléfonos</h4>
+                                    <p class="text-gray-600">+1 234 567 890<br>+1 987 654 321</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 text-blue-500 mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium text-gray-800">Correo electrónico</h4>
+                                    <p class="text-gray-600">contacto@saludplus.com<br>citas@saludplus.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 text-blue-500 mt-1">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium text-gray-800">Horario de atención</h4>
+                                    <p class="text-gray-600">Lunes a Viernes: 8:00 am - 8:00 pm<br>Sábados: 9:00 am - 2:00 pm</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="text-lg font-medium text-gray-800 mb-4">Síguenos en redes sociales</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-blue-500 hover:text-blue-700 text-xl"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="text-blue-400 hover:text-blue-600 text-xl"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-pink-500 hover:text-pink-700 text-xl"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-blue-600 hover:text-blue-800 text-xl"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <div class="h-96 bg-gray-200">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.888215423017!2d-99.168690924164!3d19.42702048187593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff2b3f509719%3A0x6d5a6c1b8aec6a08!2sPalacio%20de%20Bellas%20Artes!5e0!3m2!1ses!2smx!4v1689870422535!5m2!1ses!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <script src="scripts/loadComponents.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -176,16 +176,84 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('resize', updatePackagesSlider);
     }
 
+    // --- Especialidades Page Logic ---
+    function initEspecialidadesPage() {
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        if (menuBtn) {
+            menuBtn.addEventListener('click', function() {
+                const menu = document.getElementById('mobile-menu');
+                menu.classList.toggle('hidden');
+            });
+        }
+
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate-fade-in');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+    }
+
     // --- Main Initialization ---
     async function main() {
         const content = await fetchContent();
         if (content) {
-            if (content.heroSlides) {
+            if (content.heroSlides && document.getElementById('hero-slider-container')) {
                 initHeroSlider(content.heroSlides);
             }
-            if (content.packages) {
+            if (content.packages && document.getElementById('packages-track')) {
                 initPackagesSlider(content.packages);
             }
+        }
+        // Run page-specific logic
+        if (document.getElementById('especialidades')) {
+            initEspecialidadesPage();
         }
     }
 

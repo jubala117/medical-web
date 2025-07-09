@@ -53,28 +53,6 @@
     </style>
 </head>
 <body class="font-sans antialiased text-gray-800">
-    <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-40">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center">
-                <img src="../public/images/logoM&C2.svg" alt="Medical&Care Logo" class="h-12">
-            </div>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#" class="text-blue-800 font-medium">Inicio</a>
-                <a href="#" class="hover:text-blue-800">Servicios</a>
-                <a href="#" class="hover:text-blue-800">Especialidades</a>
-                <a href="#" class="hover:text-blue-800">Paquetes</a>
-                <a href="#" class="hover:text-blue-800">Ubicaciones</a>
-            </nav>
-            <div class="flex items-center space-x-4">
-                <a href="#" class="hidden md:block px-4 py-2 border border-blue-800 text-blue-800 rounded-lg hover:bg-blue-50">Iniciar sesión</a>
-                <a href="#" class="hidden md:block px-4 py-2 bg-blue-800 text-white rounded-lg hover:bg-blue-900">Agendar cita</a>
-                <button class="md:hidden text-blue-800" id="mobile-menu-button">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
-        </div>
-    </header>
 
     <!-- Hero Slider -->
     <section class="relative overflow-hidden hero-gradient text-white">
@@ -132,21 +110,37 @@
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="py-16 bg-gray-100">
+    <!-- Stats -->
+    <section class="bg-gray-100 py-12">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="stat-item bg-white p-8 rounded-xl shadow-sm">
-                    <p class="stat-number text-4xl md:text-5xl font-bold text-blue-800 mb-2">+6</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-500 text-4xl mb-2">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-800">20+</h3>
+                    <p class="text-gray-600">Especialistas</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-500 text-4xl mb-2">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-800">10+</h3>
                     <p class="text-gray-600">Años de experiencia</p>
                 </div>
-                <div class="stat-item bg-white p-8 rounded-xl shadow-sm">
-                    <p class="stat-number text-4xl md:text-5xl font-bold text-blue-800 mb-2">+500k</p>
-                    <p class="text-gray-600">Pacientes atendidos</p>
-                </div>
-                <div class="stat-item bg-white p-8 rounded-xl shadow-sm">
-                    <p class="stat-number text-4xl md:text-5xl font-bold text-blue-800 mb-2">+15</p>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-500 text-4xl mb-2">
+                        <i class="fas fa-procedures"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-800">10+</h3>
                     <p class="text-gray-600">Especialidades</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-500 text-4xl mb-2">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-800">500k+</h3>
+                    <p class="text-gray-600">Pacientes satisfechos</p>
                 </div>
             </div>
         </div>
@@ -213,51 +207,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Medical&Care</h3>
-                    <p class="text-gray-400">Hacemos fácil cuidarte</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-bold mb-4">Servicios</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Laboratorio</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Especialidades</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Paquetes</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Farmacia</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-bold mb-4">Información</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Sobre Nosotros</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Ubicaciones</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Trabaja con nosotros</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Preguntas frecuentes</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-bold mb-4">Contacto</h4>
-                    <ul class="space-y-2">
-                        <li class="text-gray-400">info@medicalcare.com</li>
-                        <li class="text-gray-400">+1 234 567 890</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2025 Medical&Care. Todos los derechos reservados.</p>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-white text-sm">Términos y condiciones</a>
-                    <a href="#" class="text-gray-400 hover:text-white text-sm">Política de privacidad</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+    <script src="scripts/loadComponents.js"></script>
     <script src="scripts/main.js"></script>
-
 </body>
 </html>
