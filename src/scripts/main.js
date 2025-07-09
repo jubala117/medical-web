@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const nextBtn = document.getElementById('hero-next-btn');
         let currentSlide = 0;
         let slideInterval;
+        let isMouseOverCarousel = false;
 
         function showSlide(n) {
             slides.forEach((slide, index) => {
@@ -74,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         function startSlideShow() {
+            clearInterval(slideInterval); // Clear any existing interval
             slideInterval = setInterval(nextSlide, 5000);
         }
 
@@ -83,14 +85,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function resetTimer() {
             stopSlideShow();
-            startSlideShow();
+            if (!isMouseOverCarousel) {
+                startSlideShow();
+            }
         }
 
         showSlide(0);
         startSlideShow();
 
-        heroSliderContainer.addEventListener('mouseenter', stopSlideShow);
-        heroSliderContainer.addEventListener('mouseleave', startSlideShow);
+        const heroSection = document.getElementById('hero-section');
+        if (heroSection) {
+            heroSection.addEventListener('mouseenter', () => {
+                isMouseOverCarousel = true;
+                stopSlideShow();
+            });
+            heroSection.addEventListener('mouseleave', () => {
+                isMouseOverCarousel = false;
+                startSlideShow();
+            });
+        }
         
         nextBtn.addEventListener('click', () => {
             nextSlide();

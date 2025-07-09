@@ -51,6 +51,14 @@ body {
     position: relative;
     height: 100%;
 }
+
+#hero-section {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
 .slide {
     transition: opacity 0.7s ease-in-out;
     position: absolute;
