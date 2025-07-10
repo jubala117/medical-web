@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const components = {
         'header': { path: 'components/header.html', init: 'initHeader' },
         'footer': { path: 'components/footer.html', init: null },
-        'locations': { path: 'components/locations.html', init: 'initLocationsSection' }
+        'locations': { path: 'components/locations.html', init: 'initLocationsSection' },
+        'cta-agendar': { path: 'components/cta-agendar.html', init: null }
     };
 
     const loadComponent = async (element) => {
