@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- Hero Slider Logic ---
-    function initHeroSlider(heroSlidesData) {
+    window.initHeroSlider = function(heroSlidesData) {
         const heroSliderContainer = document.getElementById('hero-slider-container');
         if (!heroSliderContainer) return;
 
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- Packages Slider Logic ---
-    function initPackagesSlider(packagesData) {
+    window.initPackagesSlider = function(packagesData) {
         const packagesTrack = document.getElementById('packages-track');
         if (!packagesTrack) return;
 
@@ -152,6 +152,8 @@ document.addEventListener('DOMContentLoaded', function() {
         let packageSlides = Array.from(packagesTrack.children);
         let isTransitioning = false;
         let packagesCurrentIndex = 1; // Start at the first real slide
+        let slideInterval;
+        let isMouseOverCarousel = false;
 
         const cloneCount = 4; // Number of slides to clone on each side
 
@@ -181,40 +183,77 @@ document.addEventListener('DOMContentLoaded', function() {
             isTransitioning = false;
             const originalSlidesCount = packagesData.length;
             
-            if (packagesCurrentIndex <= 0) {
-                packagesCurrentIndex = originalSlidesCount;
+            if (packagesCurrentIndex <= cloneCount -1) {
+                packagesCurrentIndex = originalSlidesCount + cloneCount - 1;
                 updatePackagesSlider(false);
-            } else if (packagesCurrentIndex >= originalSlidesCount + 1) {
-                packagesCurrentIndex = 1;
+            } else if (packagesCurrentIndex >= originalSlidesCount + cloneCount) {
+                packagesCurrentIndex = cloneCount;
                 updatePackagesSlider(false);
             }
         }
 
-        packagesNextBtn.addEventListener('click', () => {
+        function nextPackage() {
             if (isTransitioning) return;
             isTransitioning = true;
             packagesCurrentIndex++;
             updatePackagesSlider();
-        });
+        }
 
-        packagesPrevBtn.addEventListener('click', () => {
+        function prevPackage() {
             if (isTransitioning) return;
             isTransitioning = true;
             packagesCurrentIndex--;
             updatePackagesSlider();
+        }
+
+        function startSlideShow() {
+            stopSlideShow();
+            slideInterval = setInterval(nextPackage, 3500);
+        }
+
+        function stopSlideShow() {
+            clearInterval(slideInterval);
+        }
+
+        function resetTimer() {
+            stopSlideShow();
+            if (!isMouseOverCarousel) {
+                startSlideShow();
+            }
+        }
+
+        packagesNextBtn.addEventListener('click', () => {
+            nextPackage();
+            resetTimer();
+        });
+
+        packagesPrevBtn.addEventListener('click', () => {
+            prevPackage();
+            resetTimer();
         });
 
         packagesTrack.addEventListener('transitionend', shiftSlides);
 
+        const packagesSliderContainer = packagesTrack.parentElement.parentElement;
+        packagesSliderContainer.addEventListener('mouseenter', () => {
+            isMouseOverCarousel = true;
+            stopSlideShow();
+        });
+        packagesSliderContainer.addEventListener('mouseleave', () => {
+            isMouseOverCarousel = false;
+            startSlideShow();
+        });
+
         // Initial position
         packagesCurrentIndex = cloneCount;
         updatePackagesSlider(false);
+        startSlideShow();
 
         window.addEventListener('resize', () => updatePackagesSlider(false));
     }
 
     // --- Header Logic ---
-    function initHeader() {
+    window.initHeader = function() {
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenuPanel = document.getElementById('mobile-menu');
         const desktopNav = document.getElementById('desktop-nav');
@@ -288,7 +327,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- Especialidades Page Logic ---
-    function initEspecialidadesPage() {
+    window.initEspecialidadesPage = function() {
         // FAQ accordion
         const faqQuestions = document.querySelectorAll('.faq-question');
         faqQuestions.forEach(question => {
@@ -342,24 +381,47 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('scroll', animateOnScroll);
     }
 
+    // --- Locations Section Logic ---
+    window.initLocationsSection = function() {
+        const btnQuito = document.getElementById('btn-quito');
+        const btnSantoDomingo = document.getElementById('btn-santo-domingo');
+        const contentQuito = document.getElementById('content-quito');
+        const contentSantoDomingo = document.getElementById('content-santo-domingo');
+
+        if (!btnQuito || !btnSantoDomingo || !contentQuito || !contentSantoDomingo) {
+            return;
+        }
+
+        // Función para cambiar de pestaña
+        function switchTab(activeBtn, inactiveBtn, activeContent, inactiveContent) {
+            activeBtn.classList.add('active-tab', 'text-blue-800', 'border-blue-800');
+            activeBtn.classList.remove('text-gray-500');
+            inactiveBtn.classList.remove('active-tab', 'text-blue-800', 'border-blue-800');
+            inactiveBtn.classList.add('text-gray-500');
+            
+            activeContent.classList.remove('hidden');
+            inactiveContent.classList.add('hidden');
+        }
+
+        btnQuito.addEventListener('click', () => {
+            switchTab(btnQuito, btnSantoDomingo, contentQuito, contentSantoDomingo);
+        });
+
+        btnSantoDomingo.addEventListener('click', () => {
+            switchTab(btnSantoDomingo, btnQuito, contentSantoDomingo, contentQuito);
+        });
+    }
+
     // --- Main Initialization ---
     async function main() {
         const content = await fetchContent();
         if (content) {
-            if (content.heroSlides && document.getElementById('hero-slider-container')) {
-                initHeroSlider(content.heroSlides);
+            // The init functions will be called by loadComponents.js
+            // We just need to make the data available.
+            if (content.heroSlides) {
+                window.initHeroSlider(content.heroSlides);
             }
-            if (content.packages && document.getElementById('packages-track')) {
-                initPackagesSlider(content.packages);
-            }
-        }
-        
-        // Initialize header logic on all pages
-        initHeader();
-
-        // Run page-specific logic
-        if (document.getElementById('especialidades')) {
-            initEspecialidadesPage();
+            window.packagesData = content.packages;
         }
     }
 

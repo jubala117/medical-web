@@ -1,23 +1,44 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const loadComponent = (selector, url) => {
-        fetch(url)
-            .then(response => response.text())
-            .then(data => {
-                document.querySelector(selector).innerHTML = data;
-            })
-            .catch(error => console.error(`Error loading component from ${url}:`, error));
+document.addEventListener('DOMContentLoaded', async () => {
+    const components = {
+        'header': { path: 'components/header.html', init: 'initHeader' },
+        'footer': { path: 'components/footer.html', init: null },
+        'locations': { path: 'components/locations.html', init: 'initLocationsSection' },
+        'packages-slider': { path: 'components/packages-slider.html', init: 'initPackagesSlider' }
     };
 
-    // Create placeholders in the DOM
-    const headerPlaceholder = document.createElement('div');
-    headerPlaceholder.id = 'header-placeholder';
-    document.body.prepend(headerPlaceholder);
+    const loadComponent = async (element) => {
+        const componentName = element.dataset.component;
+        const component = components[componentName];
+        if (component) {
+            try {
+                const response = await fetch(component.path);
+                const text = await response.text();
+                element.outerHTML = text;
+                // We need to wait for the DOM to update before initializing scripts
+                // A microtask (Promise.resolve) is a good way to do this.
+                await Promise.resolve(); 
+                
+                if (component.init && typeof window[component.init] === 'function') {
+                    // Pass data if needed
+                    if (componentName === 'packages-slider' && window.packagesData) {
+                        window[component.init](window.packagesData);
+                    } else {
+                        window[component.init]();
+                    }
+                }
+            } catch (error) {
+                console.error(`Error loading component: ${componentName}`, error);
+            }
+        }
+    };
 
-    const footerPlaceholder = document.createElement('div');
-    footerPlaceholder.id = 'footer-placeholder';
-    document.body.append(footerPlaceholder);
+    const elements = Array.from(document.querySelectorAll('[data-component]'));
+    const loadPromises = elements.map(el => loadComponent(el));
+    
+    await Promise.all(loadPromises);
 
-    // Load components
-    loadComponent("#header-placeholder", "components/header.html");
-    loadComponent("#footer-placeholder", "components/footer.html");
+    // Initialize scripts that don't depend on a specific component here
+    if (document.getElementById('especialidades')) {
+        window.initEspecialidadesPage();
+    }
 });
