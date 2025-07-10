@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- Hero Slider Logic ---
-    window.initHeroSlider = function(heroSlidesData) {
+    function initHeroSlider(heroSlidesData) {
         const heroSliderContainer = document.getElementById('hero-slider-container');
         if (!heroSliderContainer) return;
 
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- Packages Slider Logic ---
-    window.initPackagesSlider = function(packagesData) {
+    function initPackagesSlider(packagesData) {
         const packagesTrack = document.getElementById('packages-track');
         if (!packagesTrack) return;
 
@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- Header Logic ---
-    window.initHeader = function() {
+    function initHeader() {
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenuPanel = document.getElementById('mobile-menu');
         const desktopNav = document.getElementById('desktop-nav');
@@ -327,7 +327,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- Especialidades Page Logic ---
-    window.initEspecialidadesPage = function() {
+    function initEspecialidadesPage() {
         // FAQ accordion
         const faqQuestions = document.querySelectorAll('.faq-question');
         faqQuestions.forEach(question => {
@@ -382,7 +382,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- Locations Section Logic ---
-    window.initLocationsSection = function() {
+    function initLocationsSection() {
         const btnQuito = document.getElementById('btn-quito');
         const btnSantoDomingo = document.getElementById('btn-santo-domingo');
         const contentQuito = document.getElementById('content-quito');
@@ -416,12 +416,23 @@ document.addEventListener('DOMContentLoaded', function() {
     async function main() {
         const content = await fetchContent();
         if (content) {
-            // The init functions will be called by loadComponents.js
-            // We just need to make the data available.
-            if (content.heroSlides) {
-                window.initHeroSlider(content.heroSlides);
+            if (content.heroSlides && document.getElementById('hero-slider-container')) {
+                initHeroSlider(content.heroSlides);
             }
-            window.packagesData = content.packages;
+            if (content.packages && document.getElementById('packages-track')) {
+                initPackagesSlider(content.packages);
+            }
+        }
+        
+        // Initialize header logic on all pages
+        initHeader();
+
+        // Run page-specific logic
+        if (document.getElementById('especialidades')) {
+            initEspecialidadesPage();
+        }
+        if (document.getElementById('ubicaciones')) {
+            initLocationsSection();
         }
     }
 
