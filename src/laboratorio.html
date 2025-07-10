@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio - Medical&Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .hero-especialidad {
+            background: linear-gradient(135deg, rgba(0, 119, 182, 0.8), rgba(0, 82, 155, 0.9)), url('https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
+            background-size: cover;
+        }
+        .check-icon {
+            color: #0077b6; /* Azul principal de tu marca */
+        }
+        .cta-button {
+            background-color: #00529B; /* Azul oscuro de tu marca */
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #003d73;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+
+    <div data-component="header"></div>
+
+<style>
+    .hero-laboratorio {
+        background: linear-gradient(135deg, rgba(0, 119, 182, 0.8), rgba(0, 82, 155, 0.9)), url('https://images.pexels.com/photos/2280547/pexels-photo-2280547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
+        background-size: cover;
+    }
+</style>
+
+<section class="hero-laboratorio text-white py-20">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Laboratorio Clínico</h1>
+        <p class="text-xl md:text-2xl max-w-3xl mx-auto">Resultados precisos y confiables para un diagnóstico certero.</p>
+    </div>
+</section>
+
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <img src="https://images.pexels.com/photos/3735747/pexels-photo-3735747.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Profesional de laboratorio analizando muestras" class="rounded-lg shadow-xl">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold text-blue-800 mb-6">Tecnología de Punta para tu Salud</h2>
+                <p class="text-lg text-gray-700 mb-4">
+                    Nuestro laboratorio clínico es una pieza fundamental para el cuidado de tu salud. A través de análisis precisos, proporcionamos información vital a nuestros médicos para la prevención, diagnóstico y seguimiento de enfermedades.
+                </p>
+                <p class="text-lg text-gray-700">
+                    Contamos con equipos modernos y un equipo de profesionales dedicados a garantizar la calidad y confiabilidad de cada uno de tus resultados.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Nuestras Áreas de Análisis</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-vial text-3xl check-icon mr-4"></i>
+                    <h3 class="text-xl font-bold">Química Sanguínea</h3>
+                </div>
+                <p class="text-gray-600">Análisis de glucosa, colesterol, triglicéridos, función renal y hepática para una evaluación completa.</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-tint text-3xl check-icon mr-4"></i>
+                    <h3 class="text-xl font-bold">Hematología</h3>
+                </div>
+                <p class="text-gray-600">Biometrías hemáticas completas para el estudio de glóbulos rojos, blancos y plaquetas.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-microscope text-3xl check-icon mr-4"></i>
+                    <h3 class="text-xl font-bold">Uroanálisis y Coprología</h3>
+                </div>
+                <p class="text-gray-600">Análisis de orina y heces para detectar infecciones, parásitos y otros problemas de salud.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-dna text-3xl check-icon mr-4"></i>
+                    <h3 class="text-xl font-bold">Hormonales</h3>
+                </div>
+                <p class="text-gray-600">Medición de perfiles hormonales tiroideos, femeninos y masculinos para evaluar el sistema endocrino.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-heartbeat text-3xl check-icon mr-4"></i>
+                    <h3 class="text-xl font-bold">Marcadores Tumorales</h3>
+                </div>
+                <p class="text-gray-600">Análisis específicos, como el antígeno prostático (PSA), para la detección y seguimiento.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-bacteria text-3xl check-icon mr-4"></i>
+                    <h3 class="text-xl font-bold">Microbiología</h3>
+                </div>
+                <p class="text-gray-600">Cultivos para identificar bacterias y determinar el antibiótico más efectivo para tratar infecciones.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-flask text-3xl check-icon mr-4"></i>
+                    <h3 class="text-xl font-bold">Pruebas Especiales y Perfiles</h3>
+                </div>
+                <p class="text-gray-600">Incluyendo pruebas de embarazo, perfiles de ITS (VIH, VDRL), y muchos otros análisis específicos.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section class="py-20 bg-blue-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">¿Listo para cuidar tu salud?</h2>
+            <p class="text-xl text-gray-700 mb-8">Nuestro equipo de médicos está aquí para escucharte y ayudarte.</p>
+            <a href="#" class="cta-button text-white font-bold py-3 px-8 rounded-lg text-lg">
+                Agendar Cita Ahora
+            </a>
+        </div>
+    </section>
+
+    <div data-component="locations"></div>
+
+    <div data-component="footer"></div>
+
+    <script src="scripts/loadComponents.js"></script>
+    <script src="scripts/main.js"></script>
+    </body>
+</html>
