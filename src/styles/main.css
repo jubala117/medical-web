@@ -231,3 +231,47 @@ body {
     padding: 0.5rem 0;
     color: #4b5563; /* gray-600 */
 }
+
+.tab-btn {
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+.active-tab {
+    border-bottom-color: #00529B; /* Azul oscuro de tu marca */
+    color: #00529B;
+}
+.location-content {
+    transition: opacity 0.3s ease-in-out;
+}
+.hidden {
+    display: none;
+}
+
+.hero-especialidad {
+    background: linear-gradient(135deg, rgba(0, 119, 182, 0.8), rgba(0, 82, 155, 0.9));
+    background-size: cover;
+}
+
+.check-icon {
+    color: #0077b6; /* Azul principal de tu marca */
+}
+
+.cta-button {
+    background-color: #00529B; /* Azul oscuro de tu marca */
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #003d73;
+}
+
+.hero-pediatria {
+    background: linear-gradient(135deg, rgba(0, 119, 182, 0.8), rgba(0, 82, 155, 0.9)), url('https://images.pexels.com/photos/7845123/pexels-photo-7845123.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
+    background-size: cover;
+}
+
+.hero-ginecologia {
+    background: linear-gradient(135deg, rgba(0, 119, 182, 0.8), rgba(0, 82, 155, 0.9)), url('https://images.pexels.com/photos/6749479/pexels-photo-6749479.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
+    background-size: cover;
+}

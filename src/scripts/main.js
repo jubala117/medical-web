@@ -412,6 +412,68 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // --- Locations Section Logic ---
+    function initLocationsSection() {
+        const btnQuito = document.getElementById('btn-quito');
+        const btnSantoDomingo = document.getElementById('btn-santo-domingo');
+        const contentQuito = document.getElementById('content-quito');
+        const contentSantoDomingo = document.getElementById('content-santo-domingo');
+
+        if (!btnQuito || !btnSantoDomingo || !contentQuito || !contentSantoDomingo) {
+            return;
+        }
+
+        // Función para cambiar de pestaña
+        function switchTab(activeBtn, inactiveBtn, activeContent, inactiveContent) {
+            activeBtn.classList.add('active-tab', 'text-blue-800', 'border-blue-800');
+            activeBtn.classList.remove('text-gray-500');
+            inactiveBtn.classList.remove('active-tab', 'text-blue-800', 'border-blue-800');
+            inactiveBtn.classList.add('text-gray-500');
+            
+            activeContent.classList.remove('hidden');
+            inactiveContent.classList.add('hidden');
+        }
+
+        btnQuito.addEventListener('click', () => {
+            switchTab(btnQuito, btnSantoDomingo, contentQuito, contentSantoDomingo);
+        });
+
+        btnSantoDomingo.addEventListener('click', () => {
+            switchTab(btnSantoDomingo, btnQuito, contentSantoDomingo, contentQuito);
+        });
+    }
+
+    // --- Locations Section Logic ---
+    function initLocationsSection() {
+        const btnQuito = document.getElementById('btn-quito');
+        const btnSantoDomingo = document.getElementById('btn-santo-domingo');
+        const contentQuito = document.getElementById('content-quito');
+        const contentSantoDomingo = document.getElementById('content-santo-domingo');
+
+        if (!btnQuito || !btnSantoDomingo || !contentQuito || !contentSantoDomingo) {
+            return;
+        }
+
+        // Función para cambiar de pestaña
+        function switchTab(activeBtn, inactiveBtn, activeContent, inactiveContent) {
+            activeBtn.classList.add('active-tab', 'text-blue-800', 'border-blue-800');
+            activeBtn.classList.remove('text-gray-500');
+            inactiveBtn.classList.remove('active-tab', 'text-blue-800', 'border-blue-800');
+            inactiveBtn.classList.add('text-gray-500');
+            
+            activeContent.classList.remove('hidden');
+            inactiveContent.classList.add('hidden');
+        }
+
+        btnQuito.addEventListener('click', () => {
+            switchTab(btnQuito, btnSantoDomingo, contentQuito, contentSantoDomingo);
+        });
+
+        btnSantoDomingo.addEventListener('click', () => {
+            switchTab(btnSantoDomingo, btnQuito, contentSantoDomingo, contentQuito);
+        });
+    }
+
     // --- Main Initialization ---
     async function main() {
         const content = await fetchContent();
