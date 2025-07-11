@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabaja con Nosotros - Medical&Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .hero-especialidad {
+            background: linear-gradient(135deg, rgba(0, 119, 182, 0.8), rgba(0, 82, 155, 0.9)), url('https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
+            background-size: cover;
+        }
+        .check-icon {
+            color: #0077b6; /* Azul principal de tu marca */
+        }
+        .cta-button {
+            background-color: #00529B; /* Azul oscuro de tu marca */
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #003d73;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+
+    <div data-component="header"></div>
+
+    <style>
+    .hero-trabaja {
+        background: linear-gradient(135deg, rgba(0, 119, 182, 0.8), rgba(0, 82, 155, 0.9)), url('https://images.pexels.com/photos/5214949/pexels-photo-5214949.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
+        background-size: cover;
+    }
+    .form-input {
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .form-input:focus {
+        border-color: #0077b6;
+        box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.2);
+    }
+</style>
+
+<section class="hero-trabaja text-white py-20">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Únete a Nuestro Equipo</h1>
+        <p class="text-xl md:text-2xl max-w-3xl mx-auto">Forma parte de una familia de profesionales dedicados a cambiar vidas a través de la salud.</p>
+    </div>
+</section>
+
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <img src="https://images.pexels.com/photos/5452201/pexels-photo-5452201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Equipo de médicos de Medical & Care sonriendo" class="rounded-lg shadow-xl">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold text-blue-800 mb-6">¿Por Qué Trabajar en Medical & Care?</h2>
+                <p class="text-lg text-gray-700 mb-4">
+                    En Medical & Care, no solo ofrecemos servicios de salud; construimos relaciones de confianza con nuestros pacientes y nuestra comunidad. Creemos en la <span class="font-bold">excelencia médica</span> impulsada por la <span class="font-bold">calidad humana</span>.
+                </p>
+                <p class="text-lg text-gray-700">
+                    Buscamos profesionales apasionados por el cuidado de la salud, que compartan nuestros valores de integridad, innovación y accesibilidad. Si quieres crecer profesionalmente en un ambiente de respeto y trabajo en equipo, este es tu lugar.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-lg">
+            <h2 class="text-3xl font-bold text-center mb-2">Postula Aquí</h2>
+            <p class="text-center text-gray-600 mb-10">Envíanos tu información y nos pondremos en contacto contigo.</p>
+            
+            <form action="mailto:info@medicalcare.ec" method="post" enctype="multipart/form-data">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="fullName" class="block text-gray-700 font-semibold mb-2">Nombre Completo</label>
+                        <input type="text" id="fullName" name="Nombre" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label for="position" class="block text-gray-700 font-semibold mb-2">Puesto al que Aplica</label>
+                        <input type="text" id="position" name="Puesto" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 font-semibold mb-2">Correo Electrónico</label>
+                        <input type="email" id="email" name="Email" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-gray-700 font-semibold mb-2">Teléfono</label>
+                        <input type="tel" id="phone" name="Telefono" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg">
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <label for="message" class="block text-gray-700 font-semibold mb-2">Mensaje (Opcional)</label>
+                    <textarea id="message" name="Mensaje" rows="4" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg"></textarea>
+                </div>
+                
+                <div class="mt-6">
+                    <label for="cv" class="block text-gray-700 font-semibold mb-2">Adjuntar CV (PDF, DOC, DOCX)</label>
+                    <input type="file" id="cv" name="CV" class="w-full text-gray-700 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" required>
+                </div>
+                
+                <div class="mt-10 text-center">
+                    <button type="submit" class="bg-blue-800 text-white font-bold py-3 px-12 rounded-lg text-lg hover:bg-blue-900 transition-colors">
+                        Enviar Postulación
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <div data-component="footer"></div>
+
+    <script src="scripts/loadComponents.js"></script>
+    <script src="scripts/main.js"></script>
+    </body>
+</html>
+

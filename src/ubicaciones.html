@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicaciones - Medical&Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .hero-especialidad {
+            background: linear-gradient(135deg, rgba(0, 119, 182, 0.8), rgba(0, 82, 155, 0.9)), url('https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
+            background-size: cover;
+        }
+        .check-icon {
+            color: #0077b6; /* Azul principal de tu marca */
+        }
+        .cta-button {
+            background-color: #00529B; /* Azul oscuro de tu marca */
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #003d73;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+
+    <div data-component="header"></div>
+
+    <style>
+    .hero-ubicaciones {
+        background: linear-gradient(135deg, rgba(0, 119, 182, 0.8), rgba(0, 82, 155, 0.9)), url('https://images.pexels.com/photos/263532/pexels-photo-263532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
+        background-size: cover;
+    }
+    .location-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .location-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+<section class="hero-ubicaciones text-white py-20">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Nuestras Ubicaciones</h1>
+        <p class="text-xl md:text-2xl max-w-3xl mx-auto">Encuentra tu centro Medical&Care más cercano. Estamos aquí para cuidarte.</p>
+    </div>
+</section>
+
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="space-y-16">
+
+            <div class="location-card bg-white p-8 rounded-xl shadow-lg flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-blue-800 mb-2">Quito (Matriz)</h2>
+                    <p class="text-lg text-gray-600 mb-6"><i class="fas fa-map-marker-alt mr-2"></i>Av. Amaru Ñan y Llira Ñan, esquina. Quitumbe.</p>
+                    
+                    <h3 class="text-xl font-bold mb-4">Servicios Disponibles:</h3>
+                    <ul class="grid grid-cols-2 gap-x-6 gap-y-2 text-gray-700">
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Medicina General</li>
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Obstetricia y Ginecología</li>
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Medicina Familiar</li>
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Pediatría</li>
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Traumatología</li>
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Psicología (Clínica e Infantil)</li>
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Nutrición</li>
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Terapia Física</li>
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Terapia de Lenguaje y Habla</li>
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Terapia Ocupacional</li>
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Fisiatría</li>
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Odontología</li>
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Rayos X</li>
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Laboratorio Clínico</li>
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Ecografías</li>
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Óptica</li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 h-80 md:h-auto rounded-lg overflow-hidden shadow-md">
+                    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1YZ06PVnpo14Q6f3etvPIMyWYT5BLhhk&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
+                </div>
+            </div>
+
+            <div class="location-card bg-white p-8 rounded-xl shadow-lg flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-blue-800 mb-2">Santo Domingo</h2>
+                    <p class="text-lg text-gray-600 mb-6"><i class="fas fa-map-marker-alt mr-2"></i>Av. Río Lelia y Los Ceibos.</p>
+
+                    <h3 class="text-xl font-bold mb-4">Servicios Disponibles:</h3>
+                    <ul class="grid grid-cols-2 gap-x-6 gap-y-2 text-gray-700">
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Medicina General</li>
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Obstetricia</li>
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Psicología</li>
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Terapia de Lenguaje</li>
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Traumatología</li>
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Terapia Física - Fisioterapia</li>
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Podología</li>
+                        <li><i class="fas fa-check-circle text-sm check-icon mr-2"></i>Odontología</li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 h-80 md:h-auto rounded-lg overflow-hidden shadow-md">
+                    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=15TpqRWL2RAVi5cEn18guYiNW6Ss65qs&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <div data-component="cta-agendar"></div>
+
+    <div data-component="footer"></div>
+
+    <script src="scripts/loadComponents.js"></script>
+    <script src="scripts/main.js"></script>
+    </body>
+</html>
