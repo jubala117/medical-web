@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Óptica - Medical&Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .hero-especialidad {
+            background: linear-gradient(135deg, rgba(0, 119, 182, 0.8), rgba(0, 82, 155, 0.9)), url('https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
+            background-size: cover;
+        }
+        .check-icon {
+            color: #0077b6; /* Azul principal de tu marca */
+        }
+        .cta-button {
+            background-color: #00529B; /* Azul oscuro de tu marca */
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #003d73;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+
+    <div data-component="header"></div>
+
+<style>
+    .hero-paquetes {
+        background: linear-gradient(135deg, rgba(0, 119, 182, 0.8), rgba(0, 82, 155, 0.9)), url('https://images.pexels.com/photos/4021779/pexels-photo-4021779.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
+        background-size: cover;
+    }
+    .package-card {
+        border: 1px solid #e2e8f0;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .package-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    .price-before {
+        text-decoration: line-through;
+        color: #ef4444; /* Rojo para el precio tachado */
+    }
+</style>
+
+<section class="hero-paquetes text-white py-20">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Paquetes Preventivos</h1>
+        <p class="text-xl md:text-2xl max-w-3xl mx-auto">Planes diseñados para cuidar tu salud y la de tu familia a los mejores precios.</p>
+    </div>
+</section>
+
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="space-y-12">
+
+            <div id="chequeo-mujer" class="package-card bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-1/3">
+                    <img src="../public/images/chequeoFemeninoEsencial.jpg" alt="Chequeo Femenino Esencial" class="h-full w-full object-cover">
+                </div>
+                <div class="md:w-2/3 p-8 flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold text-blue-800 mb-4">Chequeo Femenino Esencial M&C</h2>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                            <li>Consulta Ginecología</li>
+                            <li>Papanicolaou (Toma de Muestra)</li>
+                            <li>Ecografía Transvaginal</li>
+                            <li>Revisión de resultados</li>
+                        </ul>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-gray-500 text-lg">Antes: <span class="price-before">$77.00</span></p>
+                        <p class="text-xl font-semibold text-gray-800 mt-2 flex justify-end items-center gap-2">Paciente Regular: <span class="text-2xl text-blue-800 font-bold">$70.00</span><span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-10%</span></p>
+                        <p class="text-xl font-semibold text-gray-800 flex justify-end items-center gap-2">Club Medical: <span class="text-2xl text-blue-800 font-bold">$57.75</span><span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-25%</span></p>
+                        <a href="#" class="mt-4 inline-block bg-blue-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-900 transition-colors">Agendar Paquete</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="control-pediatrico" class="package-card bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
+                 <div class="md:w-1/3">
+                    <img src="../public/images/miPrimerControlPediatrico.jpg" alt="Control Pediátrico" class="h-full w-full object-cover">
+                </div>
+                <div class="md:w-2/3 p-8 flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold text-blue-800 mb-4">Mi Primer Control Pediátrico M&C</h2>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                           <li>Consulta Pediatría</li>
+                           <li>Biometría Hemática</li>
+                           <li>Coproparasitario</li>
+                           <li>Examen General de Orina</li>
+                           <li>Revisión de Resultados</li>
+                        </ul>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-gray-500 text-lg">Antes: <span class="price-before">$56.00</span></p>
+                        <p class="text-xl font-semibold text-gray-800 mt-2 flex justify-end items-center gap-2">Paciente Regular: <span class="text-2xl text-blue-800 font-bold">$50.40</span><span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-10%</span></p>
+                        <p class="text-xl font-semibold text-gray-800 flex justify-end items-center gap-2">Club Medical: <span class="text-2xl text-blue-800 font-bold">$42.00</span><span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-25%</span></p>
+                        <a href="#" class="mt-4 inline-block bg-blue-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-900 transition-colors">Agendar Paquete</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="salud-digestiva" class="package-card bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
+                 <div class="md:w-1/3">
+                    <img src="../public/images/saludDigestivaSinMalestares.jpg" alt="Salud Digestiva" class="h-full w-full object-cover">
+                </div>
+                <div class="md:w-2/3 p-8 flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold text-blue-800 mb-4">Salud Digestiva Sin Malestares M&C</h2>
+                         <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                           <li>Consulta Medicina General</li>
+                           <li>Ecografía Abdominal Superior</li>
+                           <li>Sangre Oculta en Heces</li>
+                           <li>Revisión de Resultados</li>
+                        </ul>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-gray-500 text-lg">Antes: <span class="price-before">$55.50</span></p>
+                        <p class="text-xl font-semibold text-gray-800 mt-2 flex justify-end items-center gap-2">Paciente Regular: <span class="text-2xl text-blue-800 font-bold">$49.95</span><span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-10%</span></p>
+                        <p class="text-xl font-semibold text-gray-800 flex justify-end items-center gap-2">Club Medical: <span class="text-2xl text-blue-800 font-bold">$41.65</span><span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-25%</span></p>
+                        <a href="#" class="mt-4 inline-block bg-blue-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-900 transition-colors">Agendar Paquete</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cuidado-masculino" class="package-card bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
+                 <div class="md:w-1/3">
+                    <img src="../public/images/prevencionCuidadoMasculino.jpg" alt="Cuidado Masculino" class="h-full w-full object-cover">
+                </div>
+                <div class="md:w-2/3 p-8 flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold text-blue-800 mb-4">Prevención y Cuidado Masculino M&C</h2>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                           <li>Consulta Medicina General</li>
+                           <li>Perfil Lipídico (Colesterol, Triglicéridos, HDL, LDL)</li>
+                           <li>Antígeno Prostático Específico (PSA)</li>
+                           <li>Revisión de Resultados</li>
+                        </ul>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-gray-500 text-lg">Antes: <span class="price-before">$48.50</span></p>
+                        <p class="text-xl font-semibold text-gray-800 mt-2 flex justify-end items-center gap-2">Paciente Regular: <span class="text-2xl text-blue-800 font-bold">$43.65</span><span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-10%</span></p>
+                        <p class="text-xl font-semibold text-gray-800 flex justify-end items-center gap-2">Club Medical: <span class="text-2xl text-blue-800 font-bold">$36.40</span><span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-25%</span></p>
+                        <a href="#" class="mt-4 inline-block bg-blue-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-900 transition-colors">Agendar Paquete</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="futuras-mamas" class="package-card bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
+                 <div class="md:w-1/3">
+                    <img src="../public/images/controlFuturasMamas.jpg" alt="Futuras Mamás" class="h-full w-full object-cover">
+                </div>
+                <div class="md:w-2/3 p-8 flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold text-blue-800 mb-4">Control para Futuras Mamás M&C</h2>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                           <li>Consulta Obstetricia</li>
+                           <li>Ecografía Obstétrica</li>
+                           <li>VDRL</li>
+                           <li>Prueba Rápida VIH</li>
+                           <li>Biometría Hemática</li>
+                        </ul>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-gray-500 text-lg">Antes: <span class="price-before">$60.50</span></p>
+                        <p class="text-xl font-semibold text-gray-800 mt-2 flex justify-end items-center gap-2">Paciente Regular: <span class="text-2xl text-blue-800 font-bold">$54.45</span><span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-10%</span></p>
+                        <p class="text-xl font-semibold text-gray-800 flex justify-end items-center gap-2">Club Medical: <span class="text-2xl text-blue-800 font-bold">$45.40</span><span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-25%</span></p>
+                        <a href="#" class="mt-4 inline-block bg-blue-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-900 transition-colors">Agendar Paquete</a>
+                    </div>
+                </div>
+            </div>
+
+             <div id="adulto-mayor" class="package-card bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
+                 <div class="md:w-1/3">
+                    <img src="../public/images/controlAdultoMayor.jpg" alt="Adulto Mayor" class="h-full w-full object-cover">
+                </div>
+                <div class="md:w-2/3 p-8 flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold text-blue-800 mb-4">Control Adulto Mayor M&C</h2>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                           <li>Consulta Medicina Familiar</li>
+                           <li>Glucosa</li>
+                           <li>Creatinina</li>
+                           <li>Chequeo Visual (Gratis)</li>
+                           <li>Consulta Odontológica</li>
+                           <li>Rayos X de Columna</li>
+                        </ul>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-gray-500 text-lg">Antes: <span class="price-before">$60.00</span></p>
+                        <p class="text-xl font-semibold text-gray-800 mt-2 flex justify-end items-center gap-2">Paciente Regular: <span class="text-2xl text-blue-800 font-bold">$54.00</span><span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-10%</span></p>
+                        <p class="text-xl font-semibold text-gray-800 flex justify-end items-center gap-2">Club Medical: <span class="text-2xl text-blue-800 font-bold">$45.00</span><span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-25%</span></p>
+                        <a href="#" class="mt-4 inline-block bg-blue-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-900 transition-colors">Agendar Paquete</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<div data-component="footer"></div>
+
+    <script src="scripts/loadComponents.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
