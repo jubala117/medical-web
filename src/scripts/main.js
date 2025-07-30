@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             </div>
                         </div>
 
-                        <a href="#" class="mt-4 inline-block text-blue-800 font-bold hover:underline">Ver más</a>
+                        <a href="paquetes-preventivos.html#${pkg.id}" class="mt-4 inline-block text-blue-800 font-bold hover:underline">Ver más</a>
                     </div>
                 </div>
             </div>
