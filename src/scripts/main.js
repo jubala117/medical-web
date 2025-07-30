@@ -135,15 +135,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="card-hover bg-white rounded-xl shadow-md overflow-hidden transition-transform h-full flex flex-col">
                     <div class="relative">
                         <img src="${pkg.img}" alt="${pkg.title}" class="w-full h-48 object-cover">
-                        ${pkg.discount ? `<span class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">${pkg.discount}</span>` : ''}
                     </div>
                     <div class="p-4 flex flex-col flex-grow">
-                        <a href="#" class="text-blue-800 font-medium hover:underline">${pkg.title}</a>
-                        <div class="mt-2 flex-grow">
-                            ${pkg.oldPrice ? `<span class="text-sm text-gray-500 line-through">Antes $${pkg.oldPrice}</span>` : ''}
-                            <p class="text-xl font-bold text-blue-800">$${pkg.newPrice}</p>
+                        <p class="font-semibold text-blue-800">${pkg.title}</p>
+                        ${pkg.oldPrice ? `<p class="text-sm text-gray-500 line-through">Antes: $${pkg.oldPrice}</p>` : ''}
+                        
+                        <div class="mt-4 flex-grow space-y-2">
+                            <div>
+                                <p class="text-sm text-gray-600">Paciente Regular</p>
+                                <div class="flex items-center justify-between">
+                                    <p class="text-xl font-bold text-blue-800">$${pkg.prices.regular.value}</p>
+                                    ${pkg.prices.regular.discount ? `<span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">${pkg.prices.regular.discount}</span>` : ''}
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-600">Club Medical</p>
+                                <div class="flex items-center justify-between">
+                                    <p class="text-xl font-bold text-blue-800">$${pkg.prices.club.value}</p>
+                                    ${pkg.prices.club.discount ? `<span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">${pkg.prices.club.discount}</span>` : ''}
+                                </div>
+                            </div>
                         </div>
-                        <a href="#" class="mt-4 inline-block text-blue-800 font-bold hover:underline">Ver más</a>
+
+                        <a href="paquetes-preventivos.html#${pkg.id}" class="mt-4 inline-block text-blue-800 font-bold hover:underline">Ver más</a>
                     </div>
                 </div>
             </div>
