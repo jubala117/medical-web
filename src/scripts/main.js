@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="w-full md:w-3/5 lg:w-1/2 text-center md:text-left z-10 pt-8 md:pt-0">
                             <p class="hero-subtitle mb-4">${slideData.subtitle}</p>
                             <h1 class="hero-title font-bold mb-8">${slideData.title}</h1>
-                            <a href="#" class="btn-primary px-8 py-3 rounded-lg text-white font-medium inline-block">${slideData.buttonText}</a>
+                            <a href="${slideData.buttonLink}" class="btn-primary px-8 py-3 rounded-lg text-white font-medium inline-block">${slideData.buttonText}</a>
                         </div>
                         ${slideData.foregroundImage ? `
                         <div class="w-full md:w-2/5 lg:w-1/2 h-auto md:h-full flex justify-center items-end">
