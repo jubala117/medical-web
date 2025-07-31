@@ -317,9 +317,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // 3. Add Login Button
+        // 3. Add Action Buttons
+        const clubButtonDesktop = document.getElementById('desktop-club-btn');
+        if (clubButtonDesktop) {
+            const clubButton = clubButtonDesktop.cloneNode(true);
+            clubButton.className = 'w-full text-center bg-amber-500 text-white px-6 py-3 rounded-md hover:bg-amber-600 transition-colors flex items-center justify-center mt-6 font-bold';
+            menuBody.appendChild(clubButton);
+        }
+        
         const loginButton = loginButtonDesktop.cloneNode(true);
-        loginButton.className = 'w-full text-center bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center mt-6';
+        loginButton.className = 'w-full text-center bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center mt-4';
         menuBody.appendChild(loginButton);
 
         // 4. Assemble Menu

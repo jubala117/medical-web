@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odontología - Medical&Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .hero-especialidad {
+            background: linear-gradient(135deg, rgba(0, 119, 182, 0.8), rgba(0, 82, 155, 0.9)), url('https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
+            background-size: cover;
+        }
+        .check-icon {
+            color: #0077b6; /* Azul principal de tu marca */
+        }
+        .cta-button {
+            background-color: #00529B; /* Azul oscuro de tu marca */
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #003d73;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+
+    <div data-component="header"></div>
+
+<style>
+    .hero-club {
+        background: linear-gradient(135deg, rgba(0, 82, 155, 0.9), rgba(29, 161, 242, 0.8)), url('https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
+        background-size: cover;
+    }
+    .benefit-card {
+        border-top: 4px solid #0077b6; /* Azul principal de tu marca */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .benefit-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    .price-tag {
+        background-color: #0077b6;
+    }
+</style>
+
+<section class="hero-club text-white py-20">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-2">¡Únete a Club Medical!</h1>
+        <p class="text-2xl md:text-3xl font-light mb-4">Ahorra todo el año en tu salud</p>
+        <p class="text-lg mb-8">Disfruta de beneficios exclusivos por solo <span class="font-bold text-2xl bg-white text-blue-800 px-2 py-1 rounded-md">$10 ANUALES</span>.</p>
+        <a href="#" class="bg-white text-blue-800 font-bold py-3 px-8 rounded-lg text-lg hover:bg-gray-200 transition-colors">
+            Adquirir Membresía
+        </a>
+    </div>
+</section>
+
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4">Con tu Membresía obtén GRATIS:</h2>
+        <p class="text-xl text-center text-gray-600 mb-12">Estos son solo algunos de los beneficios que recibes sin costo al ser parte del club.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="benefit-card bg-white p-6 rounded-lg shadow-md text-center">
+                <i class="fas fa-user-md text-4xl text-blue-800 mb-4"></i>
+                <h3 class="text-xl font-bold">Consulta Medicina General</h3>
+                <p class="text-gray-600">(1 cada 6 meses)</p>
+            </div>
+             <div class="benefit-card bg-white p-6 rounded-lg shadow-md text-center">
+                <i class="fas fa-vial text-4xl text-blue-800 mb-4"></i>
+                <h3 class="text-xl font-bold">Exámenes de Laboratorio</h3>
+                <p class="text-gray-600">(Biometría, Glucosa, Creatinina / 1 vez al año)</p>
+            </div>
+             <div class="benefit-card bg-white p-6 rounded-lg shadow-md text-center">
+                <i class="fas fa-eye text-4xl text-blue-800 mb-4"></i>
+                <h3 class="text-xl font-bold">Consulta Oftalmológica</h3>
+                <p class="text-gray-600">(1 vez al año)</p>
+            </div>
+             <div class="benefit-card bg-white p-6 rounded-lg shadow-md text-center">
+                <i class="fas fa-tooth text-4xl text-blue-800 mb-4"></i>
+                <h3 class="text-xl font-bold">Consulta Odontológica</h3>
+                <p class="text-gray-600">(1 vez al año)</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Además, accede a PRECIOS EXCLUSIVOS para socios</h2>
+        <div class="max-w-4xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 p-4 rounded-lg flex justify-between items-center">
+                    <p class="text-lg font-semibold text-gray-800">Consulta de Medicina General</p>
+                    <span class="price-tag text-white font-bold text-lg px-4 py-2 rounded-md">$10.00</span>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg flex justify-between items-center">
+                    <p class="text-lg font-semibold text-gray-800">Consulta de Obstetricia</p>
+                    <span class="price-tag text-white font-bold text-lg px-4 py-2 rounded-md">$12.00</span>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg flex justify-between items-center">
+                    <p class="text-lg font-semibold text-gray-800">Consulta de Traumatología</p>
+                    <span class="price-tag text-white font-bold text-lg px-4 py-2 rounded-md">$25.00</span>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg flex justify-between items-center">
+                    <p class="text-lg font-semibold text-gray-800">Consulta de Ginecología</p>
+                    <span class="price-tag text-white font-bold text-lg px-4 py-2 rounded-md">$20.00</span>
+                </div>
+                 <div class="bg-gray-50 p-4 rounded-lg flex justify-between items-center">
+                    <p class="text-lg font-semibold text-gray-800">Consulta de Pediatría</p>
+                    <span class="price-tag text-white font-bold text-lg px-4 py-2 rounded-md">$20.00</span>
+                </div>
+                 <div class="bg-gray-50 p-4 rounded-lg flex justify-between items-center">
+                    <p class="text-lg font-semibold text-gray-800">Consulta de Nutrición</p>
+                    <span class="price-tag text-white font-bold text-lg px-4 py-2 rounded-md">$13.00</span>
+                </div>
+                 <div class="bg-gray-50 p-4 rounded-lg flex justify-between items-center">
+                    <p class="text-lg font-semibold text-gray-800">Sesión de Fisioterapia</p>
+                    <span class="price-tag text-white font-bold text-lg px-4 py-2 rounded-md">$10.00</span>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg flex justify-between items-center">
+                    <p class="text-lg font-semibold text-gray-800">Sesión de Psicología Infantil</p>
+                    <span class="price-tag text-white font-bold text-lg px-4 py-2 rounded-md">$10.00</span>
+                </div>
+                 <div class="bg-blue-50 p-4 rounded-lg flex justify-center items-center text-blue-800 font-semibold text-center md:col-span-2">
+                    <p>¡Y muchos descuentos más en todos nuestros servicios y procedimientos!</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 bg-blue-800">
+    <div class="container mx-auto px-4 text-center text-white">
+        <h2 class="text-3xl font-bold mb-4">Cuida tu Salud y tu Bolsillo.</h2>
+        <p class="text-xl max-w-2xl mx-auto mb-8">No esperes más para disfrutar de todos los beneficios que Club Medical tiene para ti y tu familia.</p>
+        <a href="#" class="bg-white text-blue-800 font-bold py-3 px-10 rounded-lg text-xl hover:bg-gray-200 transition-colors">
+            ¡Únete al Club Ahora!
+        </a>
+    </div>
+</section>
+
+<div data-component="footer"></div>
+
+    <script src="scripts/loadComponents.js"></script>
+    <script src="scripts/main.js"></script>
+    </body>
+</html>
