@@ -34,7 +34,7 @@
 
 <style>
     .hero-club {
-        background: linear-gradient(135deg, rgba(0, 82, 155, 0.9), rgba(29, 161, 242, 0.8)), url('https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
+        background: linear-gradient(135deg, rgba(0, 82, 155, 0.9), rgba(29, 161, 242, 0.8)), url('../public/images/clubMedical.jpg') no-repeat center center;
         background-size: cover;
     }
     .benefit-card {
@@ -50,14 +50,22 @@
     }
 </style>
 
-<section class="hero-club text-white py-20">
-    <div class="container mx-auto px-4 text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-2">¡Únete a Club Medical!</h1>
-        <p class="text-2xl md:text-3xl font-light mb-4">Ahorra todo el año en tu salud</p>
-        <p class="text-lg mb-8">Disfruta de beneficios exclusivos por solo <span class="font-bold text-2xl bg-white text-blue-800 px-2 py-1 rounded-md">$10 ANUALES</span>.</p>
-        <a href="#" class="bg-white text-blue-800 font-bold py-3 px-8 rounded-lg text-lg hover:bg-gray-200 transition-colors">
-            Adquirir Membresía
-        </a>
+<section id="inicio" class="relative bg-gradient-to-r from-blue-500 to-blue-700 text-white py-20">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+
+        <div class="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
+            <h1 class="text-4xl md:text-5xl font-bold mb-2">¡Únete a Club Medical!</h1>
+            <p class="text-2xl md:text-3xl font-light mb-4">Ahorra todo el año en tu salud</p>
+            <p class="text-lg mb-8">Disfruta de beneficios exclusivos por solo <span class="font-bold text-2xl px-2 py-1 rounded-md">$10 ANUALES</span></p>
+            <a href="#" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold text-center shadow-lg transition duration-300 text-lg">
+                Adquirir Membresía
+            </a>
+        </div>
+
+        <div class="md:w-1/2 flex justify-center">
+            <img src="../public/images/clubMedical.jpg" alt="Doctor sosteninedo tarjeta de Membresía Club Medical" class="rounded-lg shadow-2xl max-w-sm h-auto">
+        </div>
+
     </div>
 </section>
 
