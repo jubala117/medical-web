@@ -34,11 +34,65 @@
     }
   ],
   "packages": [
-    { "title": "Chequeo control mujer", "oldPrice": "73.60", "newPrice": "51.52", "discount": "-30%", "img": "../public/images/package-1.jpg" },
-    { "title": "Vitamina C + Consulta", "oldPrice": null, "newPrice": "64.11", "discount": null, "img": "../public/images/package-2.jpg" },
-    { "title": "Cuidado auditivo integral", "oldPrice": null, "newPrice": "59.20", "discount": null, "img": "../public/images/package-3.jpg" },
-    { "title": "Control sistema digestivo", "oldPrice": null, "newPrice": "577.95", "discount": null, "img": "../public/images/package-4.jpg" },
-    { "title": "Plan Médico Dermatológico", "oldPrice": "71.00", "newPrice": "35.50", "discount": "-50%", "img": "../public/images/package-5.jpg" },
-    { "title": "Corazón Sano 360", "oldPrice": "76.50", "newPrice": "45.90", "discount": "-40%", "img": "../public/images/package-6.jpg" }
+    {
+      "title": "Chequeo Femenino Esencial",
+      "img": "../public/images/package-1.jpg",
+      "oldPrice": "77.00",
+      "id": "chequeo-mujer",
+      "prices": {
+        "regular": { "value": "70.00", "discount": "-10%" },
+        "club": { "value": "57.75", "discount": "-25%" }
+      }
+    },
+    {
+      "title": "Mi Primer Control Pediátrico",
+      "img": "../public/images/package-2.jpg",
+      "oldPrice": "56.00",
+      "id": "control-pediatrico",
+      "prices": {
+        "regular": { "value": "50.40", "discount": "-10%" },
+        "club": { "value": "42.00", "discount": "-25%" }
+      }
+    },
+    {
+      "title": "Salud Digestiva Sin Malestares",
+      "img": "../public/images/package-3.jpg",
+      "oldPrice": "55.50",
+      "id": "salud-digestiva",
+      "prices": {
+        "regular": { "value": "49.95", "discount": "-10%" },
+        "club": { "value": "41.65", "discount": "-25%" }
+      }
+    },
+    {
+      "title": "Prevención y Cuidado Masculino",
+      "img": "../public/images/package-4.jpg",
+      "oldPrice": "48.50",
+      "id": "cuidado-masculino",
+      "prices": {
+        "regular": { "value": "43.65", "discount": "-10%" },
+        "club": { "value": "36.40", "discount": "-25%" }
+      }
+    },
+    {
+      "title": "Control para Futuras Mamás",
+      "img": "../public/images/package-5.jpg",
+      "oldPrice": "60.50",
+      "id": "futuras-mamas",
+      "prices": {
+        "regular": { "value": "54.45", "discount": "-10%" },
+        "club": { "value": "45.40", "discount": "-25%" }
+      }
+    },
+    {
+      "title": "Control Adulto Mayor",
+      "img": "../public/images/package-6.jpg",
+      "oldPrice": "60.00",
+      "id": "adulto-mayor",
+      "prices": {
+        "regular": { "value": "54.00", "discount": "-10%" },
+        "club": { "value": "45.00", "discount": "-25%" }
+      }
+    }
   ]
 }
