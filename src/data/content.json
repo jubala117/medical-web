@@ -16,7 +16,7 @@
       "subtitle": "Tu bienestar nos importa",
       "title": "Tu salud en un solo lugar: Agenda citas y revisa tus tratamientos online",
       "buttonText": "Ingresa al Portal",
-      "buttonLink": "#"
+      "buttonLink": "https://medicalcare.ec/intranet/citasMedicas/"
     },
     {
       "bgImage": "../public/images/bg-slide1.jpg",
